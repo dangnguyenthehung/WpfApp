@@ -146,5 +146,33 @@ namespace WpfApplication1
                 file.result_1.path = filename;
             }
         }
+        private void button_result_2_path_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog dlg = new OpenFileDialog();
+            // Display OpenFileDialog by calling ShowDialog method 
+            Nullable<bool> result = dlg.ShowDialog();
+            // Get the selected file name and display in a TextBox 
+            if (result == true)
+            {
+                // Open document 
+                string filename = dlg.FileName;
+                label_result_2_path.Content = filename;
+                file.result_2.path = filename;
+            }
+        }
+        private void button_result_3_path_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog dlg = new OpenFileDialog();
+            // Display OpenFileDialog by calling ShowDialog method 
+            Nullable<bool> result = dlg.ShowDialog();
+            // Get the selected file name and display in a TextBox 
+            if (result == true)
+            {
+                // Open document 
+                string filename = dlg.FileName;
+                label_result_3_path.Content = filename;
+                file.result_3.path = filename;
+            }
+        }
     }
 }

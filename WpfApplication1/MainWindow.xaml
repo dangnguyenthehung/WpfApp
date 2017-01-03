@@ -29,6 +29,10 @@
         <Label x:Name="done" Grid.ColumnSpan="3" Content="" HorizontalAlignment="Left" Height="25" Margin="485,295,0,0" VerticalAlignment="Top" Width="210"/>
         <Label x:Name="label_result_1_path" Content="" HorizontalAlignment="Left" Height="25" Margin="480,55,0,0" VerticalAlignment="Top" Width="240" BorderThickness="0" Background="#FFCDCDCD" BorderBrush="#FFCDCDCD" Grid.ColumnSpan="3"/>
         <Button x:Name="button_result_1_path" Content="Choose" HorizontalAlignment="Left" Height="25" Margin="107,55,0,0" VerticalAlignment="Top" Width="65" Click="button_result_1_path_Click" IsDefault="True" FontFamily="Arial" Grid.Column="2"/>
+        <Label x:Name="label_result_2_path" Content="" HorizontalAlignment="Left" Height="25" Margin="480,115,0,0" VerticalAlignment="Top" Width="240" BorderThickness="0" Background="#FFCDCDCD" BorderBrush="#FFCDCDCD" Grid.ColumnSpan="3"/>
+        <Label x:Name="label_result_3_path" Content="" HorizontalAlignment="Left" Height="25" Margin="480,180,0,0" VerticalAlignment="Top" Width="240" BorderThickness="0" Background="#FFCDCDCD" BorderBrush="#FFCDCDCD" Grid.ColumnSpan="3"/>
+        <Button x:Name="button_result_2_path" Content="Choose" HorizontalAlignment="Left" Height="25" Margin="107,115,0,0" VerticalAlignment="Top" Width="65" Click="button_result_2_path_Click" IsDefault="True" FontFamily="Arial" Grid.Column="2"/>
+        <Button x:Name="button_result_3_path" Content="Choose" HorizontalAlignment="Left" Height="25" Margin="107,180,0,0" VerticalAlignment="Top" Width="65" Click="button_result_3_path_Click" IsDefault="True" FontFamily="Arial" Grid.Column="2"/>
 
     </Grid>
 </Window>

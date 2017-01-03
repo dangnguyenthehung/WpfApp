@@ -21,6 +21,7 @@ namespace WpfApplication1.Object
         //public FileData file_10 { get; set; }
 
         public SourceFileData file_final = new SourceFileData();
+       
 
         // result file
         public ResultFileData result_1 = new ResultFileData();

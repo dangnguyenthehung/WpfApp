@@ -112,7 +112,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Class\FileData.cs" />
+    <Compile Include="Class\ResultList.cs" />
     <Compile Include="Code\Function.cs" />
+    <Compile Include="Code\StaticRandom.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
