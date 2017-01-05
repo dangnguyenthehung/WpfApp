@@ -17,12 +17,23 @@ namespace WpfApplication1.Object
 
         public string[] Process (int number, int begin_count)
         {
-            count = begin_count;
-            content = File.ReadAllText(path);
-            string[] seperate_file = content.Split(new string[] { "<div class=\"question\">" }, StringSplitOptions.None);
-            string[] after_Random = Random_and_Select(seperate_file, number);
+            if (path != null )
+            {
+                count = begin_count;
+                content = File.ReadAllText(path);
+                string[] seperate_file = content.Split(new string[] { "<div class=\"question\">" }, StringSplitOptions.None);
 
-            return after_Random;
+                string[] after_Random = Random_and_Select(seperate_file, number);
+
+                return after_Random;
+            }
+            else
+            {
+                random_List = null;
+                string[] emptyStr = new string[0];
+                return emptyStr;
+            }
+            
         }
 
         private static string[] Random_and_Select(string[] content, int number)

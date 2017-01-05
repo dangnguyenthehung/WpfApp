@@ -11,5 +11,7 @@ namespace WpfApplication1.Object
         public int file_1 { get; set; }
         public int file_2 { get; set; }
         public int file_3 { get; set; }
+
+        public int destination_number { get; set; }
     }
 }

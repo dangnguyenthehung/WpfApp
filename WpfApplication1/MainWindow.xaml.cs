@@ -17,6 +17,8 @@ using WpfApplication1.Object;
 using System.IO;
 using WpfApplication1.Code;
 using Microsoft.Win32;
+using System.Collections.ObjectModel;
+using System.Threading;
 
 namespace WpfApplication1
 {
@@ -28,6 +30,9 @@ namespace WpfApplication1
         public MainWindow()
         {
             InitializeComponent();
+            label_number.Content = "Số đề muốn tạo: ";
+            ObservableCollection<int> list = Function.Add_item_comboBox_destination_number();
+            comboBox_destination_number.ItemsSource = list;
         }
         // declare variable
         private DataToMerge file = new DataToMerge();
@@ -50,6 +55,8 @@ namespace WpfApplication1
                 string filename = dlg.FileName;
                 label_1_path.Content = filename;
                 file.file_1.path = filename;
+                ObservableCollection<int> list = Function.Add_item_combobox(file.file_1);
+                comboBox_1_number.ItemsSource = list;
             }
         }
         private void button_2_path_Click(object sender, RoutedEventArgs e)
@@ -66,6 +73,8 @@ namespace WpfApplication1
                 string filename = dlg.FileName;
                 label_2_path.Content = filename;
                 file.file_2.path = filename;
+                ObservableCollection<int> list = Function.Add_item_combobox(file.file_2);
+                comboBox_2_number.ItemsSource = list;
             }
 
         }
@@ -81,6 +90,8 @@ namespace WpfApplication1
                 string filename = dlg.FileName;
                 label_3_path.Content = filename;
                 file.file_3.path = filename;
+                ObservableCollection<int> list = Function.Add_item_combobox(file.file_3);
+                comboBox_3_number.ItemsSource = list;
             }
         }
         private void button_destination_path_Click(object sender, RoutedEventArgs e)
@@ -102,29 +113,16 @@ namespace WpfApplication1
 
         private void button_Copy_Click(object sender, RoutedEventArgs e)
         {
+            
             Function.AutoMerge(file, number);
-            done.Content = "Xong";
-        }
-
-        private void textBox_1_number_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            number.file_1 = int.Parse(textBox_1_number.Text);
-        }
-
-        private void textBox_2_number_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            number.file_2 = int.Parse(textBox_2_number.Text);
-        }
-
-        private void textBox_3_number_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            number.file_3 = int.Parse(textBox_3_number.Text);
+            //Thread.Sleep(2000);
+            SetTextForLabel("Xong");
         }
 
         private void count_Click(object sender, RoutedEventArgs e)
         {
             int sum = number.file_1 + number.file_2 + number.file_3;
-            result.Text = sum.ToString() + "--" + number.file_1 + "--" + number.file_2 + "--" + number.file_3;
+            label_sum.Content = "Tổng: " + sum.ToString() + " câu";
         }
 
         private void textBox_desination_path_TextChanged(object sender, TextChangedEventArgs e)
@@ -173,6 +171,29 @@ namespace WpfApplication1
                 label_result_3_path.Content = filename;
                 file.result_3.path = filename;
             }
+        }
+
+        private void comboBox_1_number_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            number.file_1 = (int)comboBox_1_number.SelectedValue;
+        }
+        private void comboBox_2_number_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            number.file_2 = (int)comboBox_2_number.SelectedValue;
+        }
+        private void comboBox_3_number_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            number.file_3 = (int)comboBox_3_number.SelectedValue;
+        }
+        
+        private void comboBox_destination_number_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            number.destination_number = (int)comboBox_destination_number.SelectedValue;
+        }
+
+        public void SetTextForLabel(string Text)
+        {
+            done.Content = Text;
         }
     }
 }

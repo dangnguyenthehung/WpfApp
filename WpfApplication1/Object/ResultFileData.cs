@@ -12,16 +12,25 @@ namespace WpfApplication1.Object
     {
         public string[] Get_Selected_Result(int[] random_List)
         {
-            var number = random_List.Length;
-            string[] seperate_result = Split_all_result();
-            string[] selected_str = new string[number];
-            var i = 0;
-            for (i = 0; i < number; i++ )
+            if (random_List != null)
             {
-                var n = random_List[i];
-                selected_str[i] = seperate_result[n-1];
+                var number = random_List.Length;
+                string[] seperate_result = Split_all_result();
+                string[] selected_str = new string[number];
+                var i = 0;
+                for (i = 0; i < number; i++)
+                {
+                    var n = random_List[i];
+                    selected_str[i] = seperate_result[n - 1];
+                }
+                return selected_str;
             }
-            return selected_str;
+            else
+            {
+                string[] emptyStr = new string[0];
+                return emptyStr;
+            }
+            
         }
 
         public string[] Split_all_result()
