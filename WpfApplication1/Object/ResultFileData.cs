@@ -4,9 +4,9 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using WpfApplication1.Class;
+using TronDeTracNghiem.Class;
 
-namespace WpfApplication1.Object
+namespace TronDeTracNghiem.Object
 {
     public class ResultFileData : FileData
     {

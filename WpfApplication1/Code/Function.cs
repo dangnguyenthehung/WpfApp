@@ -5,10 +5,10 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using WpfApplication1.Class;
-using WpfApplication1.Object;
+using TronDeTracNghiem.Class;
+using TronDeTracNghiem.Object;
 
-namespace WpfApplication1.Code
+namespace TronDeTracNghiem.Code
 {
     public class Function
     {
@@ -16,7 +16,6 @@ namespace WpfApplication1.Code
 
         public static void AutoMerge(DataToMerge obj, NumberToMerge number)
         {
-
             //var Content_file_1 = File.ReadAllText(obj.file_1.path);
             //var Content_file_2 = File.ReadAllText(obj.file_2.path);
             //var Content_file_3 = File.ReadAllText(obj.file_3.path);
@@ -67,6 +66,102 @@ namespace WpfApplication1.Code
 
             
         }
+         // begin group of function to check data_file & result_file names
+        public static int? check_File_Name(DataToMerge obj)
+        {
+            int index = 0;
+            
+            List<string> list_file_name = add_fileName_to_list(obj);
+            List<string> list_result_name = add_resultName_to_list(obj);
+            List<CompareObject> list = get_list(list_file_name, list_result_name);
+            int nullCount = 0;
+
+            string des_path = obj.file_final.path;
+            if (des_path == null)
+            {
+                index = -1;
+                return index;
+            }
+
+            foreach (var item in list)
+            {
+                if (item.file_name != item.result_name)
+                {
+                    index = list.IndexOf(item) + 1;
+                    return index;
+                }
+                if (item.file_name == "")
+                {
+                    nullCount++;
+                }
+            }
+            if (nullCount == list.Count)
+            {
+                return null;
+            }
+            return index;
+            
+        }
+        private static List<string> add_fileName_to_list(DataToMerge obj)
+        {
+            List<string> list = new List<string>();
+            list.Add(get_File_Name(obj.file_1.path));
+            list.Add(get_File_Name(obj.file_2.path));
+            list.Add(get_File_Name(obj.file_3.path));
+            list.Add(get_File_Name(obj.file_4.path));
+            list.Add(get_File_Name(obj.file_5.path));
+            list.Add(get_File_Name(obj.file_6.path));
+            list.Add(get_File_Name(obj.file_7.path));
+            list.Add(get_File_Name(obj.file_8.path));
+            list.Add(get_File_Name(obj.file_9.path));
+            list.Add(get_File_Name(obj.file_10.path));
+
+            return list;
+        }
+        private static List<string> add_resultName_to_list(DataToMerge obj)
+        {
+            List<string> list = new List<string>();
+            list.Add(get_File_Name(obj.result_1.path));
+            list.Add(get_File_Name(obj.result_2.path));
+            list.Add(get_File_Name(obj.result_3.path));
+            list.Add(get_File_Name(obj.result_4.path));
+            list.Add(get_File_Name(obj.result_5.path));
+            list.Add(get_File_Name(obj.result_6.path));
+            list.Add(get_File_Name(obj.result_7.path));
+            list.Add(get_File_Name(obj.result_8.path));
+            list.Add(get_File_Name(obj.result_9.path));
+            list.Add(get_File_Name(obj.result_10.path));
+
+            return list;
+        }
+
+        private static List<CompareObject> get_list(List<string> file_list, List<string> result_list)
+        {
+            List<CompareObject> list = new List<CompareObject>();
+            for (var i = 0; i < file_list.Count; i++)
+            {
+                CompareObject obj = new CompareObject();
+                obj.file_name = file_list[i];
+                obj.result_name = result_list[i];
+                list.Add(obj);
+            }
+            return list;
+        }
+
+        private static string get_File_Name(string path)
+        {
+            if (path == null)
+            {
+                return "";
+            }
+            var split = path.Split('\\');
+            int index = split.Length - 1;
+            var file_name_with_extenstion = split[index].Split('.');
+            var file_name = file_name_with_extenstion[0];
+            System.Diagnostics.Debug.WriteLine(file_name);
+            return file_name;
+        } // end check file name
+
         private static void Write_content_to_file(DataToMerge obj, ContentList data, int d)
         {
             var i = 0;

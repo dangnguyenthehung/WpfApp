@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WpfApplication1.Object
+namespace TronDeTracNghiem.Object
 {
     public class DataToMerge
     {
@@ -12,13 +12,13 @@ namespace WpfApplication1.Object
         public SourceFileData file_1 = new SourceFileData();
         public SourceFileData file_2 = new SourceFileData();
         public SourceFileData file_3 = new SourceFileData();
-        //public FileData file_4 { get; set; }
-        //public FileData file_5 { get; set; }
-        //public FileData file_6 { get; set; }
-        //public FileData file_7 { get; set; }
-        //public FileData file_8 { get; set; }
-        //public FileData file_9 { get; set; }
-        //public FileData file_10 { get; set; }
+        public SourceFileData file_4 = new SourceFileData();
+        public SourceFileData file_5 = new SourceFileData();
+        public SourceFileData file_6 = new SourceFileData();
+        public SourceFileData file_7 = new SourceFileData();
+        public SourceFileData file_8 = new SourceFileData();
+        public SourceFileData file_9 = new SourceFileData();
+        public SourceFileData file_10 = new SourceFileData();
 
         public SourceFileData file_final = new SourceFileData();
        
@@ -27,6 +27,13 @@ namespace WpfApplication1.Object
         public ResultFileData result_1 = new ResultFileData();
         public ResultFileData result_2 = new ResultFileData();
         public ResultFileData result_3 = new ResultFileData();
+        public ResultFileData result_4 = new ResultFileData();
+        public ResultFileData result_5 = new ResultFileData();
+        public ResultFileData result_6 = new ResultFileData();
+        public ResultFileData result_7 = new ResultFileData();
+        public ResultFileData result_8 = new ResultFileData();
+        public ResultFileData result_9 = new ResultFileData();
+        public ResultFileData result_10 = new ResultFileData();
 
         public SourceFileData result_final = new SourceFileData();
     }

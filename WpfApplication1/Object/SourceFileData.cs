@@ -4,10 +4,10 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using WpfApplication1.Class;
-using WpfApplication1.Code;
+using TronDeTracNghiem.Class;
+using TronDeTracNghiem.Code;
 
-namespace WpfApplication1.Object
+namespace TronDeTracNghiem.Object
 {
     public class SourceFileData : FileData
     {

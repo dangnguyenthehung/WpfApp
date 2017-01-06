@@ -26,3 +26,4 @@ D:\Files\Project\Demo1\WpfApp\WpfApplication1\obj\Debug\WpfApplication1.exe.mani
 D:\Files\Project\Demo1\WpfApp\WpfApplication1\obj\Debug\WpfApplication1.application
 D:\Files\Project\Demo1\WpfApp\WpfApplication1\obj\Debug\WpfApplication1.exe
 D:\Files\Project\Demo1\WpfApp\WpfApplication1\obj\Debug\WpfApplication1.pdb
+D:\Files\Project\Demo1\WpfApp\WpfApplication1\obj\Debug\TronDeTracNghiem.csprojResolveAssemblyReference.cache

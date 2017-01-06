@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace WpfApplication1.Code
+namespace TronDeTracNghiem.Code
 {
     public class StaticRandom
     {
