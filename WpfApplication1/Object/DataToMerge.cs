@@ -36,5 +36,7 @@ namespace TronDeTracNghiem.Object
         public ResultFileData result_10 = new ResultFileData();
 
         public SourceFileData result_final = new SourceFileData();
+
+        public string Type { get; set; }
     }
 }

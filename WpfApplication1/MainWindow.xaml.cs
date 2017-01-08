@@ -19,6 +19,7 @@ using TronDeTracNghiem.Code;
 using Microsoft.Win32;
 using System.Collections.ObjectModel;
 using System.Threading;
+using System.Diagnostics;
 
 namespace TronDeTracNghiem
 {
@@ -30,11 +31,21 @@ namespace TronDeTracNghiem
         public MainWindow()
         {
             InitializeComponent();
+
+            label_choose_source.Content = "Chọn các file đề muốn trộn";
+            label_choose_result.Content = "Chọn file đáp án tương ứng";
+            label_choose_number.Content = "Số câu";
+            label_type.Content = "Đối tượng:";
+            label_choose_destination_folder.Content = "Chọn thư mục để lưu đề sau khi tạo";
+
             button_Copy.Content = "Kiểm tra";
             count.Content = "Đếm";
             label_number.Content = "Số đề muốn tạo: ";
+            button_open_destination_folder.Content = "Mở thư mục lưu đề";
             ObservableCollection<int> list = Function.Add_item_comboBox_destination_number();
+            ObservableCollection<TypeItem> list_type = Function.Add_item_comboBox_type();
             comboBox_destination_number.ItemsSource = list;
+            comboBox_type.ItemsSource = list_type;
         }
         // declare variable
         private DataToMerge file = new DataToMerge();
@@ -231,7 +242,7 @@ namespace TronDeTracNghiem
             {
                 // get selected folder
                 string filename = dlg.FileName;
-                textBox_destination_path.Text = filename;
+                label_destination_path.Content = filename;
                 file.file_final.path = filename;
             }
         }
@@ -251,7 +262,9 @@ namespace TronDeTracNghiem
                 isFalse = false;
             }
             if (isFalse)
-            {                
+            {
+                done.Foreground = new SolidColorBrush(Color.FromRgb(158, 0, 0));
+                done.FontWeight = FontWeights.Normal;
                 if (index == -1)
                 {
                     button_Copy.Content = "Kiểm tra";
@@ -281,6 +294,8 @@ namespace TronDeTracNghiem
                 else
                 {
                     button_Copy.Content = "Tạo đề";
+                    done.Foreground = new SolidColorBrush(Color.FromRgb(0, 95, 215));
+                    done.FontWeight = FontWeights.Bold;
                     SetTextForLabel("Sẵn sàng!");
                 }
 
@@ -298,12 +313,7 @@ namespace TronDeTracNghiem
                       number.file_7 + number.file_8 + number.file_9 + number.file_10;
             label_sum.Content = "Tổng: " + sum.ToString() + " câu";
         }
-
-        private void textBox_desination_path_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            //
-        }
-
+        
         private void button_result_1_path_Click(object sender, RoutedEventArgs e)
         {
             OpenFileDialog dlg = new OpenFileDialog();
@@ -494,6 +504,27 @@ namespace TronDeTracNghiem
         public void SetTextForLabel(string Text)
         {
             done.Content = Text;
+        }
+
+        private void button_open_destination_folder_Click(object sender, RoutedEventArgs e)
+        {
+            string path = file.file_final.path;
+            if (path == null)
+            {
+                path = "D:\\";
+            }
+            Process.Start(new ProcessStartInfo()
+            {
+                FileName = path,
+                UseShellExecute = true,
+                Verb = "open"
+            });
+        }
+
+        private void comboBox_type_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var item = comboBox_type.SelectedItem as TypeItem;
+            file.Type = item.value;
         }
     }
 }
