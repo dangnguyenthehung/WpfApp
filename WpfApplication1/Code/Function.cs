@@ -182,11 +182,24 @@ namespace TronDeTracNghiem.Code
             var i = 0;
             var j = 0;
 
-            var file_final_path = obj.file_final.path + "\\";
+            var file_final_path = obj.file_final.path + "\\Data\\";
+            var file_final_path_backup = obj.file_final.path + "\\Backup\\";
 
-            string file_final_name = obj.Type + "_" + d + ".cshtml";
+            string file_final_name = obj.Type.value + "_" + d + ".cshtml";
+            string file_final_name_backup = obj.Type.value + "_" + d + ".html";
 
             var file_final = file_final_path + file_final_name;
+            var file_final_backup = file_final_path_backup + file_final_name_backup;
+            
+            // check if folder exist
+            if (!Directory.Exists(file_final_path))
+            {
+                Directory.CreateDirectory(file_final_path);
+            }
+            if (!Directory.Exists(file_final_path_backup))
+            {
+                Directory.CreateDirectory(file_final_path_backup);
+            }
 
             if (File.Exists(file_final))
             {
@@ -196,41 +209,54 @@ namespace TronDeTracNghiem.Code
             {
                 //System.IO.File.Create(new_file_path);
             }
-
+            if (File.Exists(file_final_backup))
+            {
+                File.Delete(file_final_backup);
+            }
             try
             {
+                string[][] combine = new string[10][];
+                combine[0] = data.content_after_random_1;
+                combine[1] = data.content_after_random_2;
+                combine[2] = data.content_after_random_3;
+                combine[3] = data.content_after_random_4;
+                combine[4] = data.content_after_random_5;
+                combine[5] = data.content_after_random_6;
+                combine[6] = data.content_after_random_7;
+                combine[7] = data.content_after_random_8;
+                combine[8] = data.content_after_random_9;
+                combine[9] = data.content_after_random_10;
+
+                //the number of array is from 0-100 (0 is the content before the first <div>, the needed contents is from 1 to 100)
+                string combineStr = "";
+                string finalStr = "@{\nViewBag.Title = \"" + obj.Type.text + " - " + d + "\";\n" + 
+                    "Layout = \"~/Views/Shared/_LayoutClient.cshtml\";\n}\n" +
+                    "<h2 class=\"title\">Đối tượng " + obj.Type.text + " - " + d +"</h2>\n";
+                string finalStr_backup = "";
+
+                for (i = 0; i < 10; i++) // i max = number of source file
+                {
+                    for (j = 0; j < combine[i].Length; j++)
+                    {
+                        // combine all question after random each file
+                        combineStr += combine[i][j];
+                    }
+                } // end combine
+
                 using (StreamWriter file = new StreamWriter(file_final, false, Encoding.UTF8))
                 {
-
-
-                    string[][] combine = new string[10][];
-                    combine[0] = data.content_after_random_1;
-                    combine[1] = data.content_after_random_2;
-                    combine[2] = data.content_after_random_3;
-                    combine[3] = data.content_after_random_4;
-                    combine[4] = data.content_after_random_5;
-                    combine[5] = data.content_after_random_6;
-                    combine[6] = data.content_after_random_7;
-                    combine[7] = data.content_after_random_8;
-                    combine[8] = data.content_after_random_9;
-                    combine[9] = data.content_after_random_10;
-
-
-                    //the number of array is from 0-100 (0 is the content before the first <div>, the needed contents is from 1 to 100)
-                    string finalStr = "";
-
-                    for (i = 0; i < 10; i++) // i max = number of source file
-                    {
-                        for (j = 0; j < combine[i].Length; j++)
-                        {
-                            // combine all question after random each file
-                            finalStr += combine[i][j];
-                        }
-                    }
-
+                    finalStr += combineStr;
                     file.WriteLine(finalStr);
-
                 }
+                using (StreamWriter file = new StreamWriter(file_final_backup, false, Encoding.UTF8))
+                {
+                    finalStr_backup += combineStr;
+                    finalStr_backup = ReadTemplate.Replace_HTML(finalStr_backup);
+                    string jsName = obj.Type.value + "_" + d + ".js";
+                    finalStr_backup = finalStr_backup.Replace("daBS.js", jsName);
+                    file.WriteLine(finalStr_backup);
+                }
+
             }
             catch (Exception ex)
             {
@@ -240,57 +266,71 @@ namespace TronDeTracNghiem.Code
         }
         private static void Write_result_to_file (DataToMerge obj, ResultList result, int d)
         {
-            var result_final_path = obj.file_final.path + "\\";
-
-            string result_final_name = obj.Type + "_" + d + ".txt";
-
+            var result_final_path = obj.file_final.path + "\\Result\\";
+            string result_final_name = obj.Type.value + "_" + d + ".txt";
             var result_final = result_final_path + result_final_name;
+
+            var result_final_backup_path = obj.file_final.path + "\\Backup\\js\\";
+            string result_final_backup_name = obj.Type.value + "_" + d + ".js";
+            var result_final_backup = result_final_backup_path + result_final_backup_name;
+
+            if (!Directory.Exists(result_final_path))
+            {
+                Directory.CreateDirectory(result_final_path);
+            }
+            if (!Directory.Exists(result_final_backup_path))
+            {
+                Directory.CreateDirectory(result_final_backup_path);
+            }
 
             if (File.Exists(result_final))
             {
                 File.Delete(result_final);
             }
-            else
+            if (File.Exists(result_final_backup))
             {
-                //System.IO.File.Create(new_file_path);
+                File.Delete(result_final_backup);
             }
             try
             {
-                using (StreamWriter file = new StreamWriter(result_final, false, Encoding.UTF8))
+                string[][] combine = new string[10][];
+                combine[0] = result.result_List_1;
+                combine[1] = result.result_List_2;
+                combine[2] = result.result_List_3;
+                combine[3] = result.result_List_4;
+                combine[4] = result.result_List_5;
+                combine[5] = result.result_List_6;
+                combine[6] = result.result_List_7;
+                combine[7] = result.result_List_8;
+                combine[8] = result.result_List_9;
+                combine[9] = result.result_List_10;
+
+                string finalStr = "";
+                int count = 1;
+                var i = 0;
+                var j = 0;
+                for (i = 0; i < 10; i++) // i max = number of source file
                 {
-
-
-                    string[][] combine = new string[10][];
-                    combine[0] = result.result_List_1;
-                    combine[1] = result.result_List_2;
-                    combine[2] = result.result_List_3;
-                    combine[3] = result.result_List_4;
-                    combine[4] = result.result_List_5;
-                    combine[5] = result.result_List_6;
-                    combine[6] = result.result_List_7;
-                    combine[7] = result.result_List_8;
-                    combine[8] = result.result_List_9;
-                    combine[9] = result.result_List_10;
-
-
-                    //the number of array is from 0-100 (0 is the content before the first <div>, the needed contents is from 1 to 100)
-                    string finalStr = "";
-                    int count = 1;
-                    var i = 0;
-                    var j = 0;
-                    for (i = 0; i < 10; i++) // i max = number of source file
+                    for (j = 0; j < combine[i].Length; j++)
                     {
-                        for (j = 0; j < combine[i].Length; j++)
-                        {
-                            // combine all question after random each file
+                        // combine all question after random each file
 
-                            finalStr += count + combine[i][j] + ".";
-                            count++;
-                        }
+                        finalStr += count + combine[i][j] + ".";
+                        count++;
                     }
-                    finalStr = finalStr.Remove(finalStr.Length-1);
-                    file.WriteLine(finalStr);
+                }
+                finalStr = finalStr.Remove(finalStr.Length - 1);
 
+                using (StreamWriter file = new StreamWriter(result_final, false, Encoding.UTF8))
+                {                    
+                    file.WriteLine(finalStr);
+                }
+
+                string finalStr_backup = "";
+                finalStr_backup = ReadTemplate.Replace_JS(combine);
+                using (StreamWriter file = new StreamWriter(result_final_backup, false, Encoding.UTF8))
+                {
+                    file.WriteLine(finalStr_backup);
                 }
             }
             catch (Exception ex)

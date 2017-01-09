@@ -57,6 +57,7 @@ namespace TronDeTracNghiem
         private void button_1_path_Click(object sender, RoutedEventArgs e)
         {
             Microsoft.Win32.OpenFileDialog dlg = new Microsoft.Win32.OpenFileDialog();
+            dlg.Filter = "html files (*.html)|*.html";
 
             // Display OpenFileDialog by calling ShowDialog method 
             Nullable<bool> result = dlg.ShowDialog();
@@ -74,7 +75,8 @@ namespace TronDeTracNghiem
         }
         private void button_2_path_Click(object sender, RoutedEventArgs e)
         {
-            Microsoft.Win32.OpenFileDialog dlg = new Microsoft.Win32.OpenFileDialog();
+            OpenFileDialog dlg = new OpenFileDialog();
+            dlg.Filter = "html files (*.html)|*.html";
 
             // Display OpenFileDialog by calling ShowDialog method 
             Nullable<bool> result = dlg.ShowDialog();
@@ -94,6 +96,7 @@ namespace TronDeTracNghiem
         private void button_3_path_Click(object sender, RoutedEventArgs e)
         {
             OpenFileDialog dlg = new OpenFileDialog();
+            dlg.Filter = "html files (*.html)|*.html";
             // Display OpenFileDialog by calling ShowDialog method 
             Nullable<bool> result = dlg.ShowDialog();
             // Get the selected file name and display in a TextBox 
@@ -109,8 +112,8 @@ namespace TronDeTracNghiem
         }
         private void button_4_path_Click(object sender, RoutedEventArgs e)
         {
-            Microsoft.Win32.OpenFileDialog dlg = new Microsoft.Win32.OpenFileDialog();
-
+            OpenFileDialog dlg = new OpenFileDialog();
+            dlg.Filter = "html files (*.html)|*.html";
             // Display OpenFileDialog by calling ShowDialog method 
             Nullable<bool> result = dlg.ShowDialog();
 
@@ -127,7 +130,8 @@ namespace TronDeTracNghiem
         }
         private void button_5_path_Click(object sender, RoutedEventArgs e)
         {
-            Microsoft.Win32.OpenFileDialog dlg = new Microsoft.Win32.OpenFileDialog();
+            OpenFileDialog dlg = new OpenFileDialog();
+            dlg.Filter = "html files (*.html)|*.html";
 
             // Display OpenFileDialog by calling ShowDialog method 
             Nullable<bool> result = dlg.ShowDialog();
@@ -147,6 +151,7 @@ namespace TronDeTracNghiem
         private void button_6_path_Click(object sender, RoutedEventArgs e)
         {
             OpenFileDialog dlg = new OpenFileDialog();
+            dlg.Filter = "html files (*.html)|*.html";
             // Display OpenFileDialog by calling ShowDialog method 
             Nullable<bool> result = dlg.ShowDialog();
             // Get the selected file name and display in a TextBox 
@@ -163,6 +168,7 @@ namespace TronDeTracNghiem
         private void button_7_path_Click(object sender, RoutedEventArgs e)
         {
             OpenFileDialog dlg = new OpenFileDialog();
+            dlg.Filter = "html files (*.html)|*.html";
             // Display OpenFileDialog by calling ShowDialog method 
             Nullable<bool> result = dlg.ShowDialog();
             // Get the selected file name and display in a TextBox 
@@ -178,8 +184,8 @@ namespace TronDeTracNghiem
         }
         private void button_8_path_Click(object sender, RoutedEventArgs e)
         {
-            Microsoft.Win32.OpenFileDialog dlg = new Microsoft.Win32.OpenFileDialog();
-
+            OpenFileDialog dlg = new OpenFileDialog();
+            dlg.Filter = "html files (*.html)|*.html";
             // Display OpenFileDialog by calling ShowDialog method 
             Nullable<bool> result = dlg.ShowDialog();
 
@@ -196,7 +202,8 @@ namespace TronDeTracNghiem
         }
         private void button_9_path_Click(object sender, RoutedEventArgs e)
         {
-            Microsoft.Win32.OpenFileDialog dlg = new Microsoft.Win32.OpenFileDialog();
+            OpenFileDialog dlg = new OpenFileDialog();
+            dlg.Filter = "html files (*.html)|*.html";
 
             // Display OpenFileDialog by calling ShowDialog method 
             Nullable<bool> result = dlg.ShowDialog();
@@ -216,6 +223,7 @@ namespace TronDeTracNghiem
         private void button_10_path_Click(object sender, RoutedEventArgs e)
         {
             OpenFileDialog dlg = new OpenFileDialog();
+            dlg.Filter = "html files (*.html)|*.html";
             // Display OpenFileDialog by calling ShowDialog method 
             Nullable<bool> result = dlg.ShowDialog();
             // Get the selected file name and display in a TextBox 
@@ -232,6 +240,7 @@ namespace TronDeTracNghiem
 
         private void button_destination_path_Click(object sender, RoutedEventArgs e)
         {
+           // var dialog = new System.Windows.Forms.FolderBrowserDialog();
             var dlg = new CommonOpenFileDialog();
             dlg.IsFolderPicker = true;
             CommonFileDialogResult result = dlg.ShowDialog();
@@ -286,6 +295,9 @@ namespace TronDeTracNghiem
                 string content = button_Copy.Content.ToString();
                 if ( content == "Tạo đề")
                 {
+                    string targetPath = file.file_final.path + "\\Backup\\";
+                    int total = total_number();
+                    ReadTemplate.Copy_Folder(targetPath, total);
                     Function.AutoMerge(file, number);
                     SetTextForLabel("Xong");
                     button_Copy.Content = "Kiểm tra";
@@ -305,18 +317,25 @@ namespace TronDeTracNghiem
             //Thread.Sleep(2000);
             
         }
-
-        private void count_Click(object sender, RoutedEventArgs e)
+        private int total_number()
         {
             int sum = number.file_1 + number.file_2 + number.file_3 +
                       number.file_4 + number.file_5 + number.file_6 +
                       number.file_7 + number.file_8 + number.file_9 + number.file_10;
+            return sum;
+        }
+
+        private void count_Click(object sender, RoutedEventArgs e)
+        {
+            //var test = ReadTemplate.Replace_HTML();
+            int sum = total_number();
             label_sum.Content = "Tổng: " + sum.ToString() + " câu";
         }
         
         private void button_result_1_path_Click(object sender, RoutedEventArgs e)
         {
             OpenFileDialog dlg = new OpenFileDialog();
+            dlg.Filter = "txt files (*.txt)|*.txt";
             // Display OpenFileDialog by calling ShowDialog method 
             Nullable<bool> result = dlg.ShowDialog();
             // Get the selected file name and display in a TextBox 
@@ -331,6 +350,7 @@ namespace TronDeTracNghiem
         private void button_result_2_path_Click(object sender, RoutedEventArgs e)
         {
             OpenFileDialog dlg = new OpenFileDialog();
+            dlg.Filter = "txt files (*.txt)|*.txt";
             // Display OpenFileDialog by calling ShowDialog method 
             Nullable<bool> result = dlg.ShowDialog();
             // Get the selected file name and display in a TextBox 
@@ -345,6 +365,7 @@ namespace TronDeTracNghiem
         private void button_result_3_path_Click(object sender, RoutedEventArgs e)
         {
             OpenFileDialog dlg = new OpenFileDialog();
+            dlg.Filter = "txt files (*.txt)|*.txt";
             // Display OpenFileDialog by calling ShowDialog method 
             Nullable<bool> result = dlg.ShowDialog();
             // Get the selected file name and display in a TextBox 
@@ -359,6 +380,7 @@ namespace TronDeTracNghiem
         private void button_result_4_path_Click(object sender, RoutedEventArgs e)
         {
             OpenFileDialog dlg = new OpenFileDialog();
+            dlg.Filter = "txt files (*.txt)|*.txt";
             // Display OpenFileDialog by calling ShowDialog method 
             Nullable<bool> result = dlg.ShowDialog();
             // Get the selected file name and display in a TextBox 
@@ -373,6 +395,7 @@ namespace TronDeTracNghiem
         private void button_result_5_path_Click(object sender, RoutedEventArgs e)
         {
             OpenFileDialog dlg = new OpenFileDialog();
+            dlg.Filter = "txt files (*.txt)|*.txt";
             // Display OpenFileDialog by calling ShowDialog method 
             Nullable<bool> result = dlg.ShowDialog();
             // Get the selected file name and display in a TextBox 
@@ -387,6 +410,7 @@ namespace TronDeTracNghiem
         private void button_result_6_path_Click(object sender, RoutedEventArgs e)
         {
             OpenFileDialog dlg = new OpenFileDialog();
+            dlg.Filter = "txt files (*.txt)|*.txt";
             // Display OpenFileDialog by calling ShowDialog method 
             Nullable<bool> result = dlg.ShowDialog();
             // Get the selected file name and display in a TextBox 
@@ -401,6 +425,7 @@ namespace TronDeTracNghiem
         private void button_result_7_path_Click(object sender, RoutedEventArgs e)
         {
             OpenFileDialog dlg = new OpenFileDialog();
+            dlg.Filter = "txt files (*.txt)|*.txt";
             // Display OpenFileDialog by calling ShowDialog method 
             Nullable<bool> result = dlg.ShowDialog();
             // Get the selected file name and display in a TextBox 
@@ -415,6 +440,7 @@ namespace TronDeTracNghiem
         private void button_result_8_path_Click(object sender, RoutedEventArgs e)
         {
             OpenFileDialog dlg = new OpenFileDialog();
+            dlg.Filter = "txt files (*.txt)|*.txt";
             // Display OpenFileDialog by calling ShowDialog method 
             Nullable<bool> result = dlg.ShowDialog();
             // Get the selected file name and display in a TextBox 
@@ -429,6 +455,7 @@ namespace TronDeTracNghiem
         private void button_result_9_path_Click(object sender, RoutedEventArgs e)
         {
             OpenFileDialog dlg = new OpenFileDialog();
+            dlg.Filter = "txt files (*.txt)|*.txt";
             // Display OpenFileDialog by calling ShowDialog method 
             Nullable<bool> result = dlg.ShowDialog();
             // Get the selected file name and display in a TextBox 
@@ -443,6 +470,7 @@ namespace TronDeTracNghiem
         private void button_result_10_path_Click(object sender, RoutedEventArgs e)
         {
             OpenFileDialog dlg = new OpenFileDialog();
+            dlg.Filter = "txt files (*.txt)|*.txt";
             // Display OpenFileDialog by calling ShowDialog method 
             Nullable<bool> result = dlg.ShowDialog();
             // Get the selected file name and display in a TextBox 
@@ -524,7 +552,7 @@ namespace TronDeTracNghiem
         private void comboBox_type_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             var item = comboBox_type.SelectedItem as TypeItem;
-            file.Type = item.value;
+            file.Type = item;            
         }
     }
 }

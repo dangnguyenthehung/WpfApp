@@ -117,6 +117,7 @@
     <Compile Include="Class\FileData.cs" />
     <Compile Include="Class\ResultList.cs" />
     <Compile Include="Code\Function.cs" />
+    <Compile Include="Code\ReadTemplate.cs" />
     <Compile Include="Code\StaticRandom.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -147,12 +148,111 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="bin\Debug\Template_OnLuyen\font-awesome-4.6.3\fonts\fontawesome-webfont.eot" />
+    <Resource Include="bin\Debug\Template_OnLuyen\font-awesome-4.6.3\fonts\fontawesome-webfont.ttf" />
+    <None Include="bin\Debug\Template_OnLuyen\font-awesome-4.6.3\fonts\fontawesome-webfont.woff" />
+    <None Include="bin\Debug\Template_OnLuyen\font-awesome-4.6.3\fonts\fontawesome-webfont.woff2" />
+    <Resource Include="bin\Debug\Template_OnLuyen\font-awesome-4.6.3\fonts\FontAwesome.otf" />
+    <None Include="bin\Debug\Template_OnLuyen\font-awesome-4.6.3\less\animated.less" />
+    <None Include="bin\Debug\Template_OnLuyen\font-awesome-4.6.3\less\bordered-pulled.less" />
+    <None Include="bin\Debug\Template_OnLuyen\font-awesome-4.6.3\less\core.less" />
+    <None Include="bin\Debug\Template_OnLuyen\font-awesome-4.6.3\less\fixed-width.less" />
+    <None Include="bin\Debug\Template_OnLuyen\font-awesome-4.6.3\less\font-awesome.less" />
+    <None Include="bin\Debug\Template_OnLuyen\font-awesome-4.6.3\less\icons.less" />
+    <None Include="bin\Debug\Template_OnLuyen\font-awesome-4.6.3\less\larger.less" />
+    <None Include="bin\Debug\Template_OnLuyen\font-awesome-4.6.3\less\list.less" />
+    <None Include="bin\Debug\Template_OnLuyen\font-awesome-4.6.3\less\mixins.less" />
+    <None Include="bin\Debug\Template_OnLuyen\font-awesome-4.6.3\less\path.less" />
+    <None Include="bin\Debug\Template_OnLuyen\font-awesome-4.6.3\less\rotated-flipped.less" />
+    <None Include="bin\Debug\Template_OnLuyen\font-awesome-4.6.3\less\screen-reader.less" />
+    <None Include="bin\Debug\Template_OnLuyen\font-awesome-4.6.3\less\stacked.less" />
+    <None Include="bin\Debug\Template_OnLuyen\font-awesome-4.6.3\less\variables.less" />
+    <None Include="bin\Debug\Template_OnLuyen\font-awesome-4.6.3\scss\font-awesome.scss" />
+    <None Include="bin\Debug\Template_OnLuyen\font-awesome-4.6.3\scss\_animated.scss" />
+    <None Include="bin\Debug\Template_OnLuyen\font-awesome-4.6.3\scss\_bordered-pulled.scss" />
+    <None Include="bin\Debug\Template_OnLuyen\font-awesome-4.6.3\scss\_core.scss" />
+    <None Include="bin\Debug\Template_OnLuyen\font-awesome-4.6.3\scss\_fixed-width.scss" />
+    <None Include="bin\Debug\Template_OnLuyen\font-awesome-4.6.3\scss\_icons.scss" />
+    <None Include="bin\Debug\Template_OnLuyen\font-awesome-4.6.3\scss\_larger.scss" />
+    <None Include="bin\Debug\Template_OnLuyen\font-awesome-4.6.3\scss\_list.scss" />
+    <None Include="bin\Debug\Template_OnLuyen\font-awesome-4.6.3\scss\_mixins.scss" />
+    <None Include="bin\Debug\Template_OnLuyen\font-awesome-4.6.3\scss\_path.scss" />
+    <None Include="bin\Debug\Template_OnLuyen\font-awesome-4.6.3\scss\_rotated-flipped.scss" />
+    <None Include="bin\Debug\Template_OnLuyen\font-awesome-4.6.3\scss\_screen-reader.scss" />
+    <None Include="bin\Debug\Template_OnLuyen\font-awesome-4.6.3\scss\_stacked.scss" />
+    <None Include="bin\Debug\Template_OnLuyen\font-awesome-4.6.3\scss\_variables.scss" />
+    <None Include="bin\Release\Template_OnLuyen\font-awesome-4.6.3\fonts\fontawesome-webfont.eot" />
+    <Resource Include="bin\Release\Template_OnLuyen\font-awesome-4.6.3\fonts\fontawesome-webfont.ttf" />
+    <None Include="bin\Release\Template_OnLuyen\font-awesome-4.6.3\fonts\fontawesome-webfont.woff" />
+    <None Include="bin\Release\Template_OnLuyen\font-awesome-4.6.3\fonts\fontawesome-webfont.woff2" />
+    <Resource Include="bin\Release\Template_OnLuyen\font-awesome-4.6.3\fonts\FontAwesome.otf" />
+    <None Include="bin\Release\Template_OnLuyen\font-awesome-4.6.3\less\animated.less" />
+    <None Include="bin\Release\Template_OnLuyen\font-awesome-4.6.3\less\bordered-pulled.less" />
+    <None Include="bin\Release\Template_OnLuyen\font-awesome-4.6.3\less\core.less" />
+    <None Include="bin\Release\Template_OnLuyen\font-awesome-4.6.3\less\fixed-width.less" />
+    <None Include="bin\Release\Template_OnLuyen\font-awesome-4.6.3\less\font-awesome.less" />
+    <None Include="bin\Release\Template_OnLuyen\font-awesome-4.6.3\less\icons.less" />
+    <None Include="bin\Release\Template_OnLuyen\font-awesome-4.6.3\less\larger.less" />
+    <None Include="bin\Release\Template_OnLuyen\font-awesome-4.6.3\less\list.less" />
+    <None Include="bin\Release\Template_OnLuyen\font-awesome-4.6.3\less\mixins.less" />
+    <None Include="bin\Release\Template_OnLuyen\font-awesome-4.6.3\less\path.less" />
+    <None Include="bin\Release\Template_OnLuyen\font-awesome-4.6.3\less\rotated-flipped.less" />
+    <None Include="bin\Release\Template_OnLuyen\font-awesome-4.6.3\less\screen-reader.less" />
+    <None Include="bin\Release\Template_OnLuyen\font-awesome-4.6.3\less\stacked.less" />
+    <None Include="bin\Release\Template_OnLuyen\font-awesome-4.6.3\less\variables.less" />
+    <None Include="bin\Release\Template_OnLuyen\font-awesome-4.6.3\scss\font-awesome.scss" />
+    <None Include="bin\Release\Template_OnLuyen\font-awesome-4.6.3\scss\_animated.scss" />
+    <None Include="bin\Release\Template_OnLuyen\font-awesome-4.6.3\scss\_bordered-pulled.scss" />
+    <None Include="bin\Release\Template_OnLuyen\font-awesome-4.6.3\scss\_core.scss" />
+    <None Include="bin\Release\Template_OnLuyen\font-awesome-4.6.3\scss\_fixed-width.scss" />
+    <None Include="bin\Release\Template_OnLuyen\font-awesome-4.6.3\scss\_icons.scss" />
+    <None Include="bin\Release\Template_OnLuyen\font-awesome-4.6.3\scss\_larger.scss" />
+    <None Include="bin\Release\Template_OnLuyen\font-awesome-4.6.3\scss\_list.scss" />
+    <None Include="bin\Release\Template_OnLuyen\font-awesome-4.6.3\scss\_mixins.scss" />
+    <None Include="bin\Release\Template_OnLuyen\font-awesome-4.6.3\scss\_path.scss" />
+    <None Include="bin\Release\Template_OnLuyen\font-awesome-4.6.3\scss\_rotated-flipped.scss" />
+    <None Include="bin\Release\Template_OnLuyen\font-awesome-4.6.3\scss\_screen-reader.scss" />
+    <None Include="bin\Release\Template_OnLuyen\font-awesome-4.6.3\scss\_stacked.scss" />
+    <None Include="bin\Release\Template_OnLuyen\font-awesome-4.6.3\scss\_variables.scss" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
+    <None Include="Template_OnLuyen\font-awesome-4.6.3\fonts\fontawesome-webfont.eot" />
+    <Resource Include="Template_OnLuyen\font-awesome-4.6.3\fonts\fontawesome-webfont.ttf" />
+    <None Include="Template_OnLuyen\font-awesome-4.6.3\fonts\fontawesome-webfont.woff" />
+    <None Include="Template_OnLuyen\font-awesome-4.6.3\fonts\fontawesome-webfont.woff2" />
+    <Resource Include="Template_OnLuyen\font-awesome-4.6.3\fonts\FontAwesome.otf" />
+    <None Include="Template_OnLuyen\font-awesome-4.6.3\less\animated.less" />
+    <None Include="Template_OnLuyen\font-awesome-4.6.3\less\bordered-pulled.less" />
+    <None Include="Template_OnLuyen\font-awesome-4.6.3\less\core.less" />
+    <None Include="Template_OnLuyen\font-awesome-4.6.3\less\fixed-width.less" />
+    <None Include="Template_OnLuyen\font-awesome-4.6.3\less\font-awesome.less" />
+    <None Include="Template_OnLuyen\font-awesome-4.6.3\less\icons.less" />
+    <None Include="Template_OnLuyen\font-awesome-4.6.3\less\larger.less" />
+    <None Include="Template_OnLuyen\font-awesome-4.6.3\less\list.less" />
+    <None Include="Template_OnLuyen\font-awesome-4.6.3\less\mixins.less" />
+    <None Include="Template_OnLuyen\font-awesome-4.6.3\less\path.less" />
+    <None Include="Template_OnLuyen\font-awesome-4.6.3\less\rotated-flipped.less" />
+    <None Include="Template_OnLuyen\font-awesome-4.6.3\less\screen-reader.less" />
+    <None Include="Template_OnLuyen\font-awesome-4.6.3\less\stacked.less" />
+    <None Include="Template_OnLuyen\font-awesome-4.6.3\less\variables.less" />
+    <None Include="Template_OnLuyen\font-awesome-4.6.3\scss\font-awesome.scss" />
+    <None Include="Template_OnLuyen\font-awesome-4.6.3\scss\_animated.scss" />
+    <None Include="Template_OnLuyen\font-awesome-4.6.3\scss\_bordered-pulled.scss" />
+    <None Include="Template_OnLuyen\font-awesome-4.6.3\scss\_core.scss" />
+    <None Include="Template_OnLuyen\font-awesome-4.6.3\scss\_fixed-width.scss" />
+    <None Include="Template_OnLuyen\font-awesome-4.6.3\scss\_icons.scss" />
+    <None Include="Template_OnLuyen\font-awesome-4.6.3\scss\_larger.scss" />
+    <None Include="Template_OnLuyen\font-awesome-4.6.3\scss\_list.scss" />
+    <None Include="Template_OnLuyen\font-awesome-4.6.3\scss\_mixins.scss" />
+    <None Include="Template_OnLuyen\font-awesome-4.6.3\scss\_path.scss" />
+    <None Include="Template_OnLuyen\font-awesome-4.6.3\scss\_rotated-flipped.scss" />
+    <None Include="Template_OnLuyen\font-awesome-4.6.3\scss\_screen-reader.scss" />
+    <None Include="Template_OnLuyen\font-awesome-4.6.3\scss\_stacked.scss" />
+    <None Include="Template_OnLuyen\font-awesome-4.6.3\scss\_variables.scss" />
     <None Include="WpfApplication1_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
@@ -175,6 +275,44 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="resources\icon_folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\Template_OnLuyen\css\bootstrap.css" />
+    <Content Include="bin\Debug\Template_OnLuyen\css\MobileNav.css" />
+    <Content Include="bin\Debug\Template_OnLuyen\css\sb-admin-2.css" />
+    <Content Include="bin\Debug\Template_OnLuyen\css\style.css" />
+    <Content Include="bin\Debug\Template_OnLuyen\font-awesome-4.6.3\css\font-awesome.css" />
+    <Content Include="bin\Debug\Template_OnLuyen\font-awesome-4.6.3\css\font-awesome.min.css" />
+    <Content Include="bin\Debug\Template_OnLuyen\font-awesome-4.6.3\fonts\fontawesome-webfont.svg" />
+    <Content Include="bin\Debug\Template_OnLuyen\index.html" />
+    <Content Include="bin\Debug\Template_OnLuyen\js\daBS.js" />
+    <Content Include="bin\Debug\Template_OnLuyen\js\test.js" />
+    <Content Include="bin\Release\Template_OnLuyen\css\bootstrap.css" />
+    <Content Include="bin\Release\Template_OnLuyen\css\MobileNav.css" />
+    <Content Include="bin\Release\Template_OnLuyen\css\sb-admin-2.css" />
+    <Content Include="bin\Release\Template_OnLuyen\css\style.css" />
+    <Content Include="bin\Release\Template_OnLuyen\font-awesome-4.6.3\css\font-awesome.css" />
+    <Content Include="bin\Release\Template_OnLuyen\font-awesome-4.6.3\css\font-awesome.min.css" />
+    <Content Include="bin\Release\Template_OnLuyen\font-awesome-4.6.3\fonts\fontawesome-webfont.svg" />
+    <Content Include="bin\Release\Template_OnLuyen\index.html" />
+    <Content Include="bin\Release\Template_OnLuyen\js\daBS.js" />
+    <Content Include="bin\Release\Template_OnLuyen\js\test.js" />
+    <Resource Include="bin\Release\Template_OnLuyen\js\Explain.txt" />
+    <Resource Include="bin\Release\Template_OnLuyen\font-awesome-4.6.3\HELP-US-OUT.txt" />
+    <Resource Include="bin\Debug\Template_OnLuyen\js\Explain.txt" />
+    <Resource Include="bin\Debug\Template_OnLuyen\font-awesome-4.6.3\HELP-US-OUT.txt" />
+    <Content Include="Template_OnLuyen\css\bootstrap.css" />
+    <Content Include="Template_OnLuyen\css\MobileNav.css" />
+    <Content Include="Template_OnLuyen\css\sb-admin-2.css" />
+    <Content Include="Template_OnLuyen\css\style.css" />
+    <Content Include="Template_OnLuyen\font-awesome-4.6.3\css\font-awesome.css" />
+    <Content Include="Template_OnLuyen\font-awesome-4.6.3\css\font-awesome.min.css" />
+    <Content Include="Template_OnLuyen\font-awesome-4.6.3\fonts\fontawesome-webfont.svg" />
+    <Content Include="Template_OnLuyen\js\daBS.js" />
+    <Resource Include="Template_OnLuyen\js\Explain.txt" />
+    <Content Include="Template_OnLuyen\js\test.js" />
+    <Resource Include="Template_OnLuyen\font-awesome-4.6.3\HELP-US-OUT.txt" />
+    <Content Include="Template_OnLuyen\index.html" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

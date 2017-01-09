@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+		<link rel="stylesheet" href="font-awesome-4.6.3/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="css/sb-admin-2.css">
+		
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="css/MobileNav.css">
+		
+
+		<script type="text/javascript" src="js/test.js"></script>
+		<script type="text/javascript" src="js/daBS.js"></script>
+	</head>
+
+<body>
+<div id="wrapper">
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <a class="navbar-brand hidden-sm hidden-xs" href="#">KiemTraChinhTri v2.0</a>
+            </div>
+            <!-- /.navbar-header -->
+            
+            <!-- /.navbar-top-links -->
+            <!-- /.navbar-static-side -->
+        </nav>
+
+	<div id="begin" class="fullScr hidden">
+		<input type="button" value="Bắt đầu" onclick="begin()">
+	</div>	
+	
+	<div id="passForm" class="fullScr">
+		<input id="enterPass" type="password" placeholder="Enter Password">
+		<input id="btnEnter" type="button" style="display: none;" value="enter" onclick="verify()">
+	</div> 
+	
+<!-- Mobile Nav-->
+    <nav class="navbar navbar-inverse navbar-fixed-top hidden-lg hidden-md" id="sidebar-wrapper" role="navigation">
+        <p class="PanelHeader">Các câu chưa chọn:</p>
+        <ul class="nav sidebar-nav" id="uncheckList_mobile">
+            <!-- list here-->           
+        </ul>
+    </nav>
+    <!-- /#sidebar-wrapper -->
+    <div id="page-content-wrapper">
+        <button type="button" class="hamburger is-closed hidden-lg hidden-md" data-toggle="offcanvas" id="toggleButton">
+            <span class="hamb-top"></span>
+            <span class="hamb-middle"></span>
+            <span class="hamb-bottom"></span>
+        </button>
+
+
+<div id="container" class="hidden">
+<h2 class="title">Đối tượng Đảng viên</h2>
+
+        <!-- data -->
+
+<div class="btndone" id="check">
+    <input type="button" value="Kiểm tra" onclick="Kiemtra()">
+</div>
+<div class="btndone" id="done">
+    <button type="submit" class="btn btn-lg btn-success btn-block" id="done" onclick="LamXong()">
+        Làm xong
+    </button>
+</div>
+</div> <!-- /container -->
+</div> <!-- /page-content-wrapper -->
+<div class="ketqua" id="ketqua">
+	<div class="resultButton" id="resultButton" onclick="hideRightPanel();">
+		<i id="resultButtonLabel" class="fa fa-arrow-right" aria-hidden="true"></i>
+	</div>
+		<p class="PanelHeader" style="margin-top: -25px;">Kết quả</p>
+ 		<p>Tổng số câu: 100 </p>
+ 		<p>Số câu đúng: <span id="trueNumber"></span></p>
+ 		<p>Điểm: <span id="mark"></span></p>
+ 		<p>Xếp loại: <span id="qualtity"></span></p>
+</div>
+<div class="checkedTracking hidden-sm hidden-xs" id="checkedTracking">
+	<div class="trackingButton" id="trackingButton" onclick="hideLeftPanel();">
+		<i id="trackingButtonLabel" class="fa fa-arrow-left" aria-hidden="true"></i>
+	</div>
+		<p class="PanelHeader">Các câu chưa chọn:</p>
+ 		<ul id="uncheckList">
+ 			<!-- list here -->
+ 		</ul>
+ 		<div class="btndone" id="check">
+		 	<input type="button" value="Kiểm tra" onclick="Kiemtra()">
+		</div>
+</div>
+<div id="timeout"  class="fullScr">
+	<p>Hết giờ!</p>
+</div>
+<div id="countdown" class="countdownClock hidden">
+   <span id="timer"></span>
+</div>
+<!--
+<div class="nav hidden" id="mobile-nav">
+	<p style="color: white; text-align: center; font-size: 14px; margin: 1px; padding-left: 0px;">Ôn tập kiểm tra trắc nghiệm</p>
+	 <div class="navBtn" onClick="Kiemtra_Mobile()">
+	 	<i id="navButtonLabel" class="fa fa-bars" aria-hidden="true"></i>
+	</div>
+</div>
+-->
+</div>
+
+</body>
+</html>

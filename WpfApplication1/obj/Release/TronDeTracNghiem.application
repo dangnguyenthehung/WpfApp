@@ -7,14 +7,14 @@
     <framework targetVersion="4.5" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="TronDeTracNghiem.exe.manifest" size="7467">
+    <dependentAssembly dependencyType="install" codebase="TronDeTracNghiem.exe.manifest" size="20231">
       <assemblyIdentity name="TronDeTracNghiem.exe" version="1.0.0.4" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>vc3GxQ2/DeiTl/QuofQbC7yJNSC2sCTJtQ7vq1ZE/E0=</dsig:DigestValue>
+        <dsig:DigestValue>QxXriMOWAqyw4JR68Ve8aLf/o5fJycp6qesKlahL9w8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

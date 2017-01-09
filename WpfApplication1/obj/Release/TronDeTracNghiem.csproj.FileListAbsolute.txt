@@ -26,3 +26,5 @@ D:\Files\Project\Demo1\WpfApp\WpfApplication1\obj\Release\TronDeTracNghiem.exe.m
 D:\Files\Project\Demo1\WpfApp\WpfApplication1\obj\Release\TronDeTracNghiem.application
 D:\Files\Project\Demo1\WpfApp\WpfApplication1\obj\Release\TronDeTracNghiem.exe
 D:\Files\Project\Demo1\WpfApp\WpfApplication1\obj\Release\TronDeTracNghiem.pdb
+D:\Files\Project\Demo1\WpfApp\WpfApplication1\obj\Release\TronDeTracNghiem.csprojResolveAssemblyReference.cache
+D:\Files\Project\Demo1\WpfApp\WpfApplication1\obj\Release\TronDeTracNghiem_Content.g.cs
