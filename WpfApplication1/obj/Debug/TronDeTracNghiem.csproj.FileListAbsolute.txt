@@ -15,6 +15,7 @@ D:\Files\Project\Demo1\WpfApp\WpfApplication1\bin\Debug\Microsoft.WindowsAPICode
 D:\Files\Project\Demo1\WpfApp\WpfApplication1\bin\Debug\Microsoft.WindowsAPICodePack.ShellExtensions.xml
 D:\Files\Project\Demo1\WpfApp\WpfApplication1\obj\Debug\MainWindow.g.cs
 D:\Files\Project\Demo1\WpfApp\WpfApplication1\obj\Debug\App.g.cs
+D:\Files\Project\Demo1\WpfApp\WpfApplication1\obj\Debug\TronDeTracNghiem_Content.g.cs
 D:\Files\Project\Demo1\WpfApp\WpfApplication1\obj\Debug\TronDeTracNghiem_MarkupCompile.cache
 D:\Files\Project\Demo1\WpfApp\WpfApplication1\obj\Debug\TronDeTracNghiem_MarkupCompile.lref
 D:\Files\Project\Demo1\WpfApp\WpfApplication1\obj\Debug\App.baml
@@ -27,4 +28,3 @@ D:\Files\Project\Demo1\WpfApp\WpfApplication1\obj\Debug\TronDeTracNghiem.applica
 D:\Files\Project\Demo1\WpfApp\WpfApplication1\obj\Debug\TronDeTracNghiem.exe
 D:\Files\Project\Demo1\WpfApp\WpfApplication1\obj\Debug\TronDeTracNghiem.pdb
 D:\Files\Project\Demo1\WpfApp\WpfApplication1\obj\Debug\TronDeTracNghiem.csprojResolveAssemblyReference.cache
-D:\Files\Project\Demo1\WpfApp\WpfApplication1\obj\Debug\TronDeTracNghiem_Content.g.cs

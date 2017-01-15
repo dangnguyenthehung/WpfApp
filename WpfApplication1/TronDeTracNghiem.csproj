@@ -116,6 +116,7 @@
     <Compile Include="Class\ContentList.cs" />
     <Compile Include="Class\FileData.cs" />
     <Compile Include="Class\ResultList.cs" />
+    <Compile Include="Code\CheckFile.cs" />
     <Compile Include="Code\Function.cs" />
     <Compile Include="Code\ReadTemplate.cs" />
     <Compile Include="Code\StaticRandom.cs" />

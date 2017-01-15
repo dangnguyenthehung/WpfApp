@@ -20,7 +20,11 @@ namespace TronDeTracNghiem.Object
             if (path != null )
             {
                 count = begin_count;
-                content = File.ReadAllText(path);
+
+                //content = File.ReadAllText(path); // old Func
+
+                content = CheckFile.Process(ReadAll()); // new Func
+
                 string[] seperate_file = content.Split(new string[] { "<div class=\"question\">" }, StringSplitOptions.None);
 
                 string[] after_Random = Random_and_Select(seperate_file, number);
@@ -35,7 +39,34 @@ namespace TronDeTracNghiem.Object
             }
             
         }
+        public List<string> ReadAll()
+        {
+            if (path != null)
+            {
+                content = File.ReadAllText(path);
+                if (content == "")
+                {
+                    return null;
+                }
+                List<string> seperate_file = content.Split(new string[] { "<div class=\"question\">" }, StringSplitOptions.None).ToList();
+                seperate_file.RemoveAt(0);
+                List<string> after_split = new List<string>();
+                foreach (var item in seperate_file)
+                {
+                    string Str = "<div class=\"question\">" + item;
+                    after_split.Add(Str);
+                }
 
+                return after_split;
+            }
+            else
+            {
+                random_List = null;
+                //string[] emptyStr = new string[0];
+                return null;
+            }
+
+        }
         private static string[] Random_and_Select(string[] content, int number)
         {
             

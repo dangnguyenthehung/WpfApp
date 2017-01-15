@@ -184,13 +184,16 @@ namespace TronDeTracNghiem.Code
 
             var file_final_path = obj.file_final.path + "\\Data\\";
             var file_final_path_backup = obj.file_final.path + "\\Backup\\";
+            var file_final_path_word = obj.file_final.path + "\\Data\\Word\\";
 
             string file_final_name = obj.Type.value + "_" + d + ".cshtml";
             string file_final_name_backup = obj.Type.value + "_" + d + ".html";
+            string file_final_name_word = obj.Type.value + "_" + d + ".doc";
 
             var file_final = file_final_path + file_final_name;
             var file_final_backup = file_final_path_backup + file_final_name_backup;
-            
+            var file_final_word = file_final_path_word + file_final_name_word;
+
             // check if folder exist
             if (!Directory.Exists(file_final_path))
             {
@@ -199,6 +202,10 @@ namespace TronDeTracNghiem.Code
             if (!Directory.Exists(file_final_path_backup))
             {
                 Directory.CreateDirectory(file_final_path_backup);
+            }
+            if (!Directory.Exists(file_final_path_word))
+            {
+                Directory.CreateDirectory(file_final_path_word);
             }
 
             if (File.Exists(file_final))
@@ -233,6 +240,7 @@ namespace TronDeTracNghiem.Code
                     "Layout = \"~/Views/Shared/_LayoutClient.cshtml\";\n}\n" +
                     "<h2 class=\"title\">Đối tượng " + obj.Type.text + " - " + d +"</h2>\n";
                 string finalStr_backup = "";
+                string finalStr_word = "";
 
                 for (i = 0; i < 10; i++) // i max = number of source file
                 {
@@ -256,6 +264,12 @@ namespace TronDeTracNghiem.Code
                     finalStr_backup = finalStr_backup.Replace("daBS.js", jsName);
                     file.WriteLine(finalStr_backup);
                 }
+                using (StreamWriter file = new StreamWriter(file_final_word, false, Encoding.UTF8))
+                {
+                    finalStr_word = ReadTemplate.Split_for_word(combine);
+                    file.WriteLine(finalStr_word);
+                }
+                
 
             }
             catch (Exception ex)

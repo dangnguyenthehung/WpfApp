@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace TronDeTracNghiem.Code
@@ -53,52 +54,7 @@ namespace TronDeTracNghiem.Code
             File.WriteAllText(js_path,content);
         }
 
-        //static void WalkDirectoryTree(DirectoryInfo root, string targetPath)
-        //{
-        //    FileInfo[] files = null;
-        //    DirectoryInfo[] subDirs = null;
-
-        //    // First, process all the files directly under this folder
-        //    try
-        //    {
-        //        files = root.GetFiles("*.*");
-        //    }
-        //    // This is thrown if even one of the files requires permissions greater
-        //    // than the application provides.
-        //    catch (UnauthorizedAccessException e)
-        //    {
-        //        // This code just writes out the message and continues to recurse.
-        //        // You may decide to do something different here. For example, you
-        //        // can try to elevate your privileges and access the file again.
-        //        System.Diagnostics.Debug.WriteLine(e.Message);
-        //    }
-
-        //    catch (DirectoryNotFoundException e)
-        //    {
-        //        Console.WriteLine(e.Message);
-        //    }
-
-        //    if (files != null)
-        //    {
-        //        foreach (FileInfo fi in files)
-        //        {
-        //            // In this example, we only access the existing FileInfo object. If we
-        //            // want to open, delete or modify the file, then
-        //            // a try-catch block is required here to handle the case
-        //            // where the file has been deleted since the call to TraverseTree().
-        //            Console.WriteLine(fi.FullName);
-        //        }
-
-        //        // Now find all the subdirectories under this directory.
-        //        subDirs = root.GetDirectories();
-
-        //        foreach (DirectoryInfo dirInfo in subDirs)
-        //        {
-        //            // Resursive call for each subdirectory.
-        //            WalkDirectoryTree(dirInfo);
-        //        }
-        //    }
-        //}
+        
 
         public static string Replace_HTML(string data)
         {
@@ -126,5 +82,70 @@ namespace TronDeTracNghiem.Code
             }
             return finalStr;
         }
+        public static string Split_for_word(string[][] data)
+        {
+            string finalStr = "";
+            int count = 1;
+            string start_content = "</span>";
+            string end_content = "</b>";
+
+            string start_result = "'\">";
+            string end_result = "</p>";
+
+            string[][] result_combine = new string[10][];
+
+            var i = 0;
+            var j = 0;
+            for (i = 0; i < 10; i++) // i max = number of source file
+            {
+                for (j = 0; j < data[i].Length; j++)
+                {
+                    int start_index = data[i][j].IndexOf(start_content) + 7;
+                    int end_index = data[i][j].IndexOf(end_content);
+                    var content = data[i][j].Substring(start_index, end_index-start_index);
+
+                    var oldStr = Environment.NewLine;
+                    var newStr = "";
+                    
+                    string str = count + ". " + content;
+
+                    str = Regex.Replace(str, @"\s+", " ");
+                    str = str.Replace(oldStr, newStr) + Environment.NewLine;
+                    //result_combine[i][j] = str;
+                    finalStr += str;
+
+                    // split result a..., b.., c..
+                    var result_group_split = data[i][j].Split(new string[] { "<p>" }, StringSplitOptions.None);
+
+                    // [0] is the content of question
+                    for (var t = 1; t < result_group_split.Length; t++)
+                    {
+                        var result = "";
+                        try
+                        {
+                            start_index = result_group_split[t].IndexOf(start_result) + 3;
+                            end_index = result_group_split[t].IndexOf(end_result);
+                            result = result_group_split[t].Substring(start_index, end_index - start_index);
+
+                            // result_combine[i][j] += result + "\n";
+                            result = Regex.Replace(result, @"\s+", " ");
+                            result = result.Replace(oldStr, newStr) + Environment.NewLine;
+                            
+                            finalStr += result;
+                        }
+                        catch
+                        {
+                            System.Diagnostics.Debug.WriteLine(str);
+                            System.Diagnostics.Debug.WriteLine(result_group_split[t]);
+                        }
+                    }
+                    count++;
+                }
+            }
+            
+
+            return finalStr;
+        }
+
     }
 }

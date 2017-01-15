@@ -297,8 +297,10 @@ namespace TronDeTracNghiem
                 {
                     string targetPath = file.file_final.path + "\\Backup\\";
                     int total = total_number();
+
                     ReadTemplate.Copy_Folder(targetPath, total);
                     Function.AutoMerge(file, number);
+
                     SetTextForLabel("Xong");
                     button_Copy.Content = "Kiểm tra";
                     isFalse = true;
