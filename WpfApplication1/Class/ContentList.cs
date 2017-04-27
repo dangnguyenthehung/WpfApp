@@ -18,5 +18,15 @@ namespace TronDeTracNghiem.Class
         public string[] content_after_random_8 { get; set; }
         public string[] content_after_random_9 { get; set; }
         public string[] content_after_random_10 { get; set; }
+        public string[] content_after_random_11 { get; set; }
+        public string[] content_after_random_12 { get; set; }
+        public string[] content_after_random_13 { get; set; }
+        public string[] content_after_random_14 { get; set; }
+        public string[] content_after_random_15 { get; set; }
+        public string[] content_after_random_16 { get; set; }
+        public string[] content_after_random_17 { get; set; }
+        public string[] content_after_random_18 { get; set; }
+        public string[] content_after_random_19 { get; set; }
+        public string[] content_after_random_20 { get; set; }
     }
 }

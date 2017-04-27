@@ -18,6 +18,16 @@ namespace TronDeTracNghiem.Object
         public int file_8 { get; set; }
         public int file_9 { get; set; }
         public int file_10 { get; set; }
+        public int file_11 { get; set; }
+        public int file_12 { get; set; }
+        public int file_13 { get; set; }
+        public int file_14 { get; set; }
+        public int file_15 { get; set; }
+        public int file_16 { get; set; }
+        public int file_17 { get; set; }
+        public int file_18 { get; set; }
+        public int file_19 { get; set; }
+        public int file_20 { get; set; }
 
         public int destination_number { get; set; }
     }

@@ -35,6 +35,11 @@ namespace TronDeTracNghiem
             label_choose_source.Content = "Chọn các file đề muốn trộn";
             label_choose_result.Content = "Chọn file đáp án tương ứng";
             label_choose_number.Content = "Số câu";
+
+            label_choose_source_Copy.Content = "Chọn các file đề muốn trộn";
+            label_choose_result_Copy.Content = "Chọn file đáp án tương ứng";
+            label_choose_number_Copy.Content = "Số câu";
+
             label_type.Content = "Đối tượng:";
             label_choose_destination_folder.Content = "Chọn thư mục để lưu đề sau khi tạo";
 
@@ -237,6 +242,191 @@ namespace TronDeTracNghiem
                 comboBox_10_number.ItemsSource = list;
             }
         }
+        // update_to 20
+        private void button_11_path_Click(object sender, RoutedEventArgs e)
+        {
+            Microsoft.Win32.OpenFileDialog dlg = new Microsoft.Win32.OpenFileDialog();
+            dlg.Filter = "html files (*.html)|*.html";
+
+            // Display OpenFileDialog by calling ShowDialog method 
+            Nullable<bool> result = dlg.ShowDialog();
+
+            // Get the selected file name and display in a TextBox 
+            if (result == true)
+            {
+                // Open document 
+                string filename = dlg.FileName;
+                label_11_path.Content = filename;
+                file.file_11.path = filename;
+                ObservableCollection<int> list = Function.Add_item_combobox(file.file_11);
+                comboBox_11_number.ItemsSource = list;
+            }
+        }
+        private void button_12_path_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog dlg = new OpenFileDialog();
+            dlg.Filter = "html files (*.html)|*.html";
+
+            // Display OpenFileDialog by calling ShowDialog method 
+            Nullable<bool> result = dlg.ShowDialog();
+
+            // Get the selected file name and display in a TextBox 
+            if (result == true)
+            {
+                // Open document 
+                string filename = dlg.FileName;
+                label_12_path.Content = filename;
+                file.file_12.path = filename;
+                ObservableCollection<int> list = Function.Add_item_combobox(file.file_12);
+                comboBox_12_number.ItemsSource = list;
+            }
+
+        }
+        private void button_13_path_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog dlg = new OpenFileDialog();
+            dlg.Filter = "html files (*.html)|*.html";
+            // Display OpenFileDialog by calling ShowDialog method 
+            Nullable<bool> result = dlg.ShowDialog();
+            // Get the selected file name and display in a TextBox 
+            if (result == true)
+            {
+                // Open document 
+                string filename = dlg.FileName;
+                label_13_path.Content = filename;
+                file.file_13.path = filename;
+                ObservableCollection<int> list = Function.Add_item_combobox(file.file_13);
+                comboBox_13_number.ItemsSource = list;
+            }
+        }
+        private void button_14_path_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog dlg = new OpenFileDialog();
+            dlg.Filter = "html files (*.html)|*.html";
+            // Display OpenFileDialog by calling ShowDialog method 
+            Nullable<bool> result = dlg.ShowDialog();
+
+            // Get the selected file name and display in a TextBox 
+            if (result == true)
+            {
+                // Open document 
+                string filename = dlg.FileName;
+                label_14_path.Content = filename;
+                file.file_14.path = filename;
+                ObservableCollection<int> list = Function.Add_item_combobox(file.file_14);
+                comboBox_14_number.ItemsSource = list;
+            }
+        }
+        private void button_15_path_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog dlg = new OpenFileDialog();
+            dlg.Filter = "html files (*.html)|*.html";
+
+            // Display OpenFileDialog by calling ShowDialog method 
+            Nullable<bool> result = dlg.ShowDialog();
+
+            // Get the selected file name and display in a TextBox 
+            if (result == true)
+            {
+                // Open document 
+                string filename = dlg.FileName;
+                label_15_path.Content = filename;
+                file.file_15.path = filename;
+                ObservableCollection<int> list = Function.Add_item_combobox(file.file_15);
+                comboBox_15_number.ItemsSource = list;
+            }
+
+        }
+        private void button_16_path_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog dlg = new OpenFileDialog();
+            dlg.Filter = "html files (*.html)|*.html";
+            // Display OpenFileDialog by calling ShowDialog method 
+            Nullable<bool> result = dlg.ShowDialog();
+            // Get the selected file name and display in a TextBox 
+            if (result == true)
+            {
+                // Open document 
+                string filename = dlg.FileName;
+                label_16_path.Content = filename;
+                file.file_16.path = filename;
+                ObservableCollection<int> list = Function.Add_item_combobox(file.file_16);
+                comboBox_16_number.ItemsSource = list;
+            }
+        }
+        private void button_17_path_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog dlg = new OpenFileDialog();
+            dlg.Filter = "html files (*.html)|*.html";
+            // Display OpenFileDialog by calling ShowDialog method 
+            Nullable<bool> result = dlg.ShowDialog();
+            // Get the selected file name and display in a TextBox 
+            if (result == true)
+            {
+                // Open document 
+                string filename = dlg.FileName;
+                label_17_path.Content = filename;
+                file.file_17.path = filename;
+                ObservableCollection<int> list = Function.Add_item_combobox(file.file_17);
+                comboBox_17_number.ItemsSource = list;
+            }
+        }
+        private void button_18_path_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog dlg = new OpenFileDialog();
+            dlg.Filter = "html files (*.html)|*.html";
+            // Display OpenFileDialog by calling ShowDialog method 
+            Nullable<bool> result = dlg.ShowDialog();
+
+            // Get the selected file name and display in a TextBox 
+            if (result == true)
+            {
+                // Open document 
+                string filename = dlg.FileName;
+                label_18_path.Content = filename;
+                file.file_18.path = filename;
+                ObservableCollection<int> list = Function.Add_item_combobox(file.file_18);
+                comboBox_18_number.ItemsSource = list;
+            }
+        }
+        private void button_19_path_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog dlg = new OpenFileDialog();
+            dlg.Filter = "html files (*.html)|*.html";
+
+            // Display OpenFileDialog by calling ShowDialog method 
+            Nullable<bool> result = dlg.ShowDialog();
+
+            // Get the selected file name and display in a TextBox 
+            if (result == true)
+            {
+                // Open document 
+                string filename = dlg.FileName;
+                label_19_path.Content = filename;
+                file.file_19.path = filename;
+                ObservableCollection<int> list = Function.Add_item_combobox(file.file_19);
+                comboBox_19_number.ItemsSource = list;
+            }
+
+        }
+        private void button_20_path_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog dlg = new OpenFileDialog();
+            dlg.Filter = "html files (*.html)|*.html";
+            // Display OpenFileDialog by calling ShowDialog method 
+            Nullable<bool> result = dlg.ShowDialog();
+            // Get the selected file name and display in a TextBox 
+            if (result == true)
+            {
+                // Open document 
+                string filename = dlg.FileName;
+                label_20_path.Content = filename;
+                file.file_20.path = filename;
+                ObservableCollection<int> list = Function.Add_item_combobox(file.file_20);
+                comboBox_20_number.ItemsSource = list;
+            }
+        }
+        //
 
         private void button_destination_path_Click(object sender, RoutedEventArgs e)
         {
@@ -287,7 +477,7 @@ namespace TronDeTracNghiem
                 else
                 {
                     button_Copy.Content = "Kiểm tra";
-                    SetTextForLabel("Không đúng File đáp án - Hàng: " + (index));
+                    SetTextForLabel("Không đúng File đáp án \n Hàng: " + (index));
                 }
             }
             else
@@ -321,9 +511,10 @@ namespace TronDeTracNghiem
         }
         private int total_number()
         {
-            int sum = number.file_1 + number.file_2 + number.file_3 +
-                      number.file_4 + number.file_5 + number.file_6 +
-                      number.file_7 + number.file_8 + number.file_9 + number.file_10;
+            int sum = number.file_1 + number.file_2 + number.file_3 + number.file_4 + number.file_5 + 
+                      number.file_6 + number.file_7 + number.file_8 + number.file_9 + number.file_10 + 
+                      number.file_11 + number.file_12 + number.file_13 + number.file_14 + number.file_15 + 
+                      number.file_16 + number.file_17 + number.file_18 + number.file_19 + number.file_20;
             return sum;
         }
 
@@ -331,7 +522,7 @@ namespace TronDeTracNghiem
         {
             //var test = ReadTemplate.Replace_HTML();
             int sum = total_number();
-            label_sum.Content = "Tổng: " + sum.ToString() + " câu";
+            label_sum.Content = sum + " câu";
         }
         
         private void button_result_1_path_Click(object sender, RoutedEventArgs e)
@@ -484,6 +675,158 @@ namespace TronDeTracNghiem
                 file.result_10.path = filename;
             }
         }
+        // additional - to 20
+        private void button_result_11_path_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog dlg = new OpenFileDialog();
+            dlg.Filter = "txt files (*.txt)|*.txt";
+            // Display OpenFileDialog by calling ShowDialog method 
+            Nullable<bool> result = dlg.ShowDialog();
+            // Get the selected file name and display in a TextBox 
+            if (result == true)
+            {
+                // Open document 
+                string filename = dlg.FileName;
+                label_result_11_path.Content = filename;
+                file.result_11.path = filename;
+            }
+        }
+        private void button_result_12_path_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog dlg = new OpenFileDialog();
+            dlg.Filter = "txt files (*.txt)|*.txt";
+            // Display OpenFileDialog by calling ShowDialog method 
+            Nullable<bool> result = dlg.ShowDialog();
+            // Get the selected file name and display in a TextBox 
+            if (result == true)
+            {
+                // Open document 
+                string filename = dlg.FileName;
+                label_result_12_path.Content = filename;
+                file.result_12.path = filename;
+            }
+        }
+        private void button_result_13_path_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog dlg = new OpenFileDialog();
+            dlg.Filter = "txt files (*.txt)|*.txt";
+            // Display OpenFileDialog by calling ShowDialog method 
+            Nullable<bool> result = dlg.ShowDialog();
+            // Get the selected file name and display in a TextBox 
+            if (result == true)
+            {
+                // Open document 
+                string filename = dlg.FileName;
+                label_result_13_path.Content = filename;
+                file.result_13.path = filename;
+            }
+        }
+        private void button_result_14_path_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog dlg = new OpenFileDialog();
+            dlg.Filter = "txt files (*.txt)|*.txt";
+            // Display OpenFileDialog by calling ShowDialog method 
+            Nullable<bool> result = dlg.ShowDialog();
+            // Get the selected file name and display in a TextBox 
+            if (result == true)
+            {
+                // Open document 
+                string filename = dlg.FileName;
+                label_result_14_path.Content = filename;
+                file.result_14.path = filename;
+            }
+        }
+        private void button_result_15_path_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog dlg = new OpenFileDialog();
+            dlg.Filter = "txt files (*.txt)|*.txt";
+            // Display OpenFileDialog by calling ShowDialog method 
+            Nullable<bool> result = dlg.ShowDialog();
+            // Get the selected file name and display in a TextBox 
+            if (result == true)
+            {
+                // Open document 
+                string filename = dlg.FileName;
+                label_result_15_path.Content = filename;
+                file.result_15.path = filename;
+            }
+        }
+        private void button_result_16_path_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog dlg = new OpenFileDialog();
+            dlg.Filter = "txt files (*.txt)|*.txt";
+            // Display OpenFileDialog by calling ShowDialog method 
+            Nullable<bool> result = dlg.ShowDialog();
+            // Get the selected file name and display in a TextBox 
+            if (result == true)
+            {
+                // Open document 
+                string filename = dlg.FileName;
+                label_result_16_path.Content = filename;
+                file.result_16.path = filename;
+            }
+        }
+        private void button_result_17_path_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog dlg = new OpenFileDialog();
+            dlg.Filter = "txt files (*.txt)|*.txt";
+            // Display OpenFileDialog by calling ShowDialog method 
+            Nullable<bool> result = dlg.ShowDialog();
+            // Get the selected file name and display in a TextBox 
+            if (result == true)
+            {
+                // Open document 
+                string filename = dlg.FileName;
+                label_result_17_path.Content = filename;
+                file.result_17.path = filename;
+            }
+        }
+        private void button_result_18_path_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog dlg = new OpenFileDialog();
+            dlg.Filter = "txt files (*.txt)|*.txt";
+            // Display OpenFileDialog by calling ShowDialog method 
+            Nullable<bool> result = dlg.ShowDialog();
+            // Get the selected file name and display in a TextBox 
+            if (result == true)
+            {
+                // Open document 
+                string filename = dlg.FileName;
+                label_result_18_path.Content = filename;
+                file.result_18.path = filename;
+            }
+        }
+        private void button_result_19_path_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog dlg = new OpenFileDialog();
+            dlg.Filter = "txt files (*.txt)|*.txt";
+            // Display OpenFileDialog by calling ShowDialog method 
+            Nullable<bool> result = dlg.ShowDialog();
+            // Get the selected file name and display in a TextBox 
+            if (result == true)
+            {
+                // Open document 
+                string filename = dlg.FileName;
+                label_result_19_path.Content = filename;
+                file.result_19.path = filename;
+            }
+        }
+        private void button_result_20_path_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog dlg = new OpenFileDialog();
+            dlg.Filter = "txt files (*.txt)|*.txt";
+            // Display OpenFileDialog by calling ShowDialog method 
+            Nullable<bool> result = dlg.ShowDialog();
+            // Get the selected file name and display in a TextBox 
+            if (result == true)
+            {
+                // Open document 
+                string filename = dlg.FileName;
+                label_result_20_path.Content = filename;
+                file.result_20.path = filename;
+            }
+        }
+        //
 
         private void comboBox_1_number_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -525,6 +868,48 @@ namespace TronDeTracNghiem
         {
             number.file_10 = (int)comboBox_10_number.SelectedValue;
         }
+        // to - 20
+        private void comboBox_11_number_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            number.file_11 = (int)comboBox_11_number.SelectedValue;
+        }
+        private void comboBox_12_number_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            number.file_12 = (int)comboBox_12_number.SelectedValue;
+        }
+        private void comboBox_13_number_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            number.file_13 = (int)comboBox_13_number.SelectedValue;
+        }
+        private void comboBox_14_number_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            number.file_14 = (int)comboBox_14_number.SelectedValue;
+        }
+        private void comboBox_15_number_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            number.file_15 = (int)comboBox_15_number.SelectedValue;
+        }
+        private void comboBox_16_number_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            number.file_16 = (int)comboBox_16_number.SelectedValue;
+        }
+        private void comboBox_17_number_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            number.file_17 = (int)comboBox_17_number.SelectedValue;
+        }
+        private void comboBox_18_number_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            number.file_18 = (int)comboBox_18_number.SelectedValue;
+        }
+        private void comboBox_19_number_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            number.file_19 = (int)comboBox_19_number.SelectedValue;
+        }
+        private void comboBox_20_number_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            number.file_20 = (int)comboBox_20_number.SelectedValue;
+        }
+        //
 
         private void comboBox_destination_number_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {

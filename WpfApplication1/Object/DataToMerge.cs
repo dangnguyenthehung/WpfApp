@@ -19,6 +19,16 @@ namespace TronDeTracNghiem.Object
         public SourceFileData file_8 = new SourceFileData();
         public SourceFileData file_9 = new SourceFileData();
         public SourceFileData file_10 = new SourceFileData();
+        public SourceFileData file_11 = new SourceFileData();
+        public SourceFileData file_12 = new SourceFileData();
+        public SourceFileData file_13 = new SourceFileData();
+        public SourceFileData file_14 = new SourceFileData();
+        public SourceFileData file_15 = new SourceFileData();
+        public SourceFileData file_16 = new SourceFileData();
+        public SourceFileData file_17 = new SourceFileData();
+        public SourceFileData file_18 = new SourceFileData();
+        public SourceFileData file_19 = new SourceFileData();
+        public SourceFileData file_20 = new SourceFileData();
 
         public SourceFileData file_final = new SourceFileData();
        
@@ -34,6 +44,16 @@ namespace TronDeTracNghiem.Object
         public ResultFileData result_8 = new ResultFileData();
         public ResultFileData result_9 = new ResultFileData();
         public ResultFileData result_10 = new ResultFileData();
+        public ResultFileData result_11 = new ResultFileData();
+        public ResultFileData result_12 = new ResultFileData();
+        public ResultFileData result_13 = new ResultFileData();
+        public ResultFileData result_14 = new ResultFileData();
+        public ResultFileData result_15 = new ResultFileData();
+        public ResultFileData result_16 = new ResultFileData();
+        public ResultFileData result_17 = new ResultFileData();
+        public ResultFileData result_18 = new ResultFileData();
+        public ResultFileData result_19 = new ResultFileData();
+        public ResultFileData result_20 = new ResultFileData();
 
         public SourceFileData result_final = new SourceFileData();
 

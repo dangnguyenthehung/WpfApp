@@ -63,7 +63,48 @@ namespace TronDeTracNghiem.Code
 
                 data.content_after_random_10 = obj.file_10.Process(number.file_10, count);
                 var randomList_10 = obj.file_10.get_RandomList();
-                
+
+                // to -20
+                data.content_after_random_11 = obj.file_11.Process(number.file_11, count);
+                var randomList_11 = obj.file_11.get_RandomList();
+                count += number.file_11; // begin count file 12
+
+                data.content_after_random_12 = obj.file_12.Process(number.file_12, count);
+                var randomList_12 = obj.file_12.get_RandomList();
+                count += number.file_12; // begin count file 13
+
+                data.content_after_random_13 = obj.file_13.Process(number.file_13, count);
+                var randomList_13 = obj.file_13.get_RandomList();
+                count += number.file_13; // begin count file 14
+
+                data.content_after_random_14 = obj.file_14.Process(number.file_14, count);
+                var randomList_14 = obj.file_14.get_RandomList();
+                count += number.file_14; // begin count file 15
+
+                data.content_after_random_15 = obj.file_15.Process(number.file_15, count);
+                var randomList_15 = obj.file_15.get_RandomList();
+                count += number.file_15; // begin count file 16
+
+                data.content_after_random_16 = obj.file_16.Process(number.file_16, count);
+                var randomList_16 = obj.file_16.get_RandomList();
+                count += number.file_16; // begin count file 17
+
+                data.content_after_random_17 = obj.file_17.Process(number.file_17, count);
+                var randomList_17 = obj.file_17.get_RandomList();
+                count += number.file_17; // begin count file 18
+
+                data.content_after_random_18 = obj.file_18.Process(number.file_18, count);
+                var randomList_18 = obj.file_18.get_RandomList();
+                count += number.file_18; // begin count file 19
+
+                data.content_after_random_19 = obj.file_19.Process(number.file_19, count);
+                var randomList_19 = obj.file_19.get_RandomList();
+                count += number.file_19; // begin count file 20
+
+                data.content_after_random_20 = obj.file_20.Process(number.file_20, count);
+                var randomList_20 = obj.file_20.get_RandomList();
+                //
+
                 // combine result
                 result.result_List_1 = obj.result_1.Get_Selected_Result(randomList_1);
                 result.result_List_2 = obj.result_2.Get_Selected_Result(randomList_2);
@@ -75,6 +116,17 @@ namespace TronDeTracNghiem.Code
                 result.result_List_8 = obj.result_8.Get_Selected_Result(randomList_8);
                 result.result_List_9 = obj.result_9.Get_Selected_Result(randomList_9);
                 result.result_List_10 = obj.result_10.Get_Selected_Result(randomList_10);
+
+                result.result_List_11 = obj.result_11.Get_Selected_Result(randomList_11);
+                result.result_List_12 = obj.result_12.Get_Selected_Result(randomList_12);
+                result.result_List_13 = obj.result_13.Get_Selected_Result(randomList_13);
+                result.result_List_14 = obj.result_14.Get_Selected_Result(randomList_14);
+                result.result_List_15 = obj.result_15.Get_Selected_Result(randomList_15);
+                result.result_List_16 = obj.result_16.Get_Selected_Result(randomList_16);
+                result.result_List_17 = obj.result_17.Get_Selected_Result(randomList_17);
+                result.result_List_18 = obj.result_18.Get_Selected_Result(randomList_18);
+                result.result_List_19 = obj.result_19.Get_Selected_Result(randomList_19);
+                result.result_List_20 = obj.result_20.Get_Selected_Result(randomList_20);
 
                 Write_content_to_file(obj, data, d);
                 Write_result_to_file(obj, result, d);
@@ -130,6 +182,16 @@ namespace TronDeTracNghiem.Code
             list.Add(get_File_Name(obj.file_8.path));
             list.Add(get_File_Name(obj.file_9.path));
             list.Add(get_File_Name(obj.file_10.path));
+            list.Add(get_File_Name(obj.file_11.path));
+            list.Add(get_File_Name(obj.file_12.path));
+            list.Add(get_File_Name(obj.file_13.path));
+            list.Add(get_File_Name(obj.file_14.path));
+            list.Add(get_File_Name(obj.file_15.path));
+            list.Add(get_File_Name(obj.file_16.path));
+            list.Add(get_File_Name(obj.file_17.path));
+            list.Add(get_File_Name(obj.file_18.path));
+            list.Add(get_File_Name(obj.file_19.path));
+            list.Add(get_File_Name(obj.file_20.path));
 
             return list;
         }
@@ -146,6 +208,16 @@ namespace TronDeTracNghiem.Code
             list.Add(get_File_Name(obj.result_8.path));
             list.Add(get_File_Name(obj.result_9.path));
             list.Add(get_File_Name(obj.result_10.path));
+            list.Add(get_File_Name(obj.result_11.path));
+            list.Add(get_File_Name(obj.result_12.path));
+            list.Add(get_File_Name(obj.result_13.path));
+            list.Add(get_File_Name(obj.result_14.path));
+            list.Add(get_File_Name(obj.result_15.path));
+            list.Add(get_File_Name(obj.result_16.path));
+            list.Add(get_File_Name(obj.result_17.path));
+            list.Add(get_File_Name(obj.result_18.path));
+            list.Add(get_File_Name(obj.result_19.path));
+            list.Add(get_File_Name(obj.result_20.path));
 
             return list;
         }
@@ -222,7 +294,7 @@ namespace TronDeTracNghiem.Code
             }
             try
             {
-                string[][] combine = new string[10][];
+                string[][] combine = new string[20][];
                 combine[0] = data.content_after_random_1;
                 combine[1] = data.content_after_random_2;
                 combine[2] = data.content_after_random_3;
@@ -233,6 +305,16 @@ namespace TronDeTracNghiem.Code
                 combine[7] = data.content_after_random_8;
                 combine[8] = data.content_after_random_9;
                 combine[9] = data.content_after_random_10;
+                combine[10] = data.content_after_random_11;
+                combine[11] = data.content_after_random_12;
+                combine[12] = data.content_after_random_13;
+                combine[13] = data.content_after_random_14;
+                combine[14] = data.content_after_random_15;
+                combine[15] = data.content_after_random_16;
+                combine[16] = data.content_after_random_17;
+                combine[17] = data.content_after_random_18;
+                combine[18] = data.content_after_random_19;
+                combine[19] = data.content_after_random_20;
 
                 //the number of array is from 0-100 (0 is the content before the first <div>, the needed contents is from 1 to 100)
                 string combineStr = "";
@@ -242,7 +324,7 @@ namespace TronDeTracNghiem.Code
                 string finalStr_backup = "";
                 string finalStr_word = "";
 
-                for (i = 0; i < 10; i++) // i max = number of source file
+                for (i = 0; i < 20; i++) // i max = number of source file
                 {
                     for (j = 0; j < combine[i].Length; j++)
                     {
@@ -307,7 +389,7 @@ namespace TronDeTracNghiem.Code
             }
             try
             {
-                string[][] combine = new string[10][];
+                string[][] combine = new string[20][];
                 combine[0] = result.result_List_1;
                 combine[1] = result.result_List_2;
                 combine[2] = result.result_List_3;
@@ -318,12 +400,22 @@ namespace TronDeTracNghiem.Code
                 combine[7] = result.result_List_8;
                 combine[8] = result.result_List_9;
                 combine[9] = result.result_List_10;
+                combine[10] = result.result_List_11;
+                combine[11] = result.result_List_12;
+                combine[12] = result.result_List_13;
+                combine[13] = result.result_List_14;
+                combine[14] = result.result_List_15;
+                combine[15] = result.result_List_16;
+                combine[16] = result.result_List_17;
+                combine[17] = result.result_List_18;
+                combine[18] = result.result_List_19;
+                combine[19] = result.result_List_20;
 
                 string finalStr = "";
                 int count = 1;
                 var i = 0;
                 var j = 0;
-                for (i = 0; i < 10; i++) // i max = number of source file
+                for (i = 0; i < 20; i++) // i max = number of source file
                 {
                     for (j = 0; j < combine[i].Length; j++)
                     {
@@ -378,7 +470,7 @@ namespace TronDeTracNghiem.Code
         }
         public static ObservableCollection<int> Add_item_comboBox_destination_number()
         {
-            int number = 20;
+            int number = 50;
             ObservableCollection<int> list = new ObservableCollection<int>();
             var i = 1;
             for (i = 1; i <= number; i++)
