@@ -46,16 +46,14 @@ namespace TronDeTracNghiem.Code
                 System.Diagnostics.Debug.WriteLine("Source path does not exist!");
             }
 
-            string js_path = targetPath + "js\\test.js";
-            var content = File.ReadAllText(js_path);
-            string oldStr = "numberOfQuestion = 100;";
-            string newStr = "numberOfQuestion = " + total_number_of_question + ";";
-            content = content.Replace(oldStr,newStr);
-            File.WriteAllText(js_path,content);
+            //string js_path = targetPath + "js\\test.js";
+            //var content = File.ReadAllText(js_path);
+            ////string oldStr = "numberOfQuestion = 100;";
+            ////string newStr = "numberOfQuestion = " + total_number_of_question + ";";
+            ////content = content.Replace(oldStr,newStr);
+            //File.WriteAllText(js_path,content);
         }
-
         
-
         public static string Replace_HTML(string data)
         {
             string original = Read_HTML();
