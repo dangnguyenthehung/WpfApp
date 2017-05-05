@@ -110,287 +110,287 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>yi4Op3oDq7fw/z6DnXn/l5AzRwClGVqpOIcUp4wjUQc=</dsig:DigestValue>
+        <dsig:DigestValue>9zaH3kQqhkoYj5oUs4iJU/nFZjfvlhFq+v79Guq3zVo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="bin\Debug\Template_OnLuyen\css\bootstrap.css" size="152767">
+  <file name="bin\Debug\Template_OnLuyen\css\bootstrap.css" size="146010">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>opI27tVP8lfzTdiKv9Wi8UuRkNhIAvZwMVLWtOpRHKk=</dsig:DigestValue>
+      <dsig:DigestValue>fmMNkMcjSw3xcp9iuPnku/ryk9kaWgrEbfJfKmdZ45o=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="bin\Debug\Template_OnLuyen\css\MobileNav.css" size="7275">
+  <file name="bin\Debug\Template_OnLuyen\css\MobileNav.css" size="7006">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>007dyo/eLyUBU4s0FkyE5tZEk1+xOPFuDW3oA4jp2gE=</dsig:DigestValue>
+      <dsig:DigestValue>9fHqtMt+XEpGkQI6k0Z9Cfl9RGbVYnmXGhaZ1mlMhqE=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="bin\Debug\Template_OnLuyen\css\sb-admin-2.css" size="9123">
+  <file name="bin\Debug\Template_OnLuyen\css\sb-admin-2.css" size="8678">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>U/iLLf8RITTI4F0ki91QHcxT0RD3g1PsCmLVZm9ME4Q=</dsig:DigestValue>
+      <dsig:DigestValue>UqDpo11vgTxnveAKFL2fvJx7yJiZZRQ9FTxZd2PD3w4=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="bin\Debug\Template_OnLuyen\css\style.css" size="6579">
+  <file name="bin\Debug\Template_OnLuyen\css\style.css" size="6181">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>6EPdGuQZfKygXjgFHmVEn0YeHr3nm9+/6Zcorx+OHC4=</dsig:DigestValue>
+      <dsig:DigestValue>txW7Gbvcso6NzK0wfkhrSi5WKHR5I5YG7uNnB5Ejx9w=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="bin\Debug\Template_OnLuyen\font-awesome-4.6.3\css\font-awesome.css" size="37333">
+  <file name="bin\Debug\Template_OnLuyen\font-awesome-4.6.3\css\font-awesome.css" size="35134">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>tlDR4ddNyT7oEzbrjwByB7D9mUtxCbqZnOoa5S6IUcg=</dsig:DigestValue>
+      <dsig:DigestValue>uXf0U0UCIqBp2J3S53b28h+fpC9uFcA8f+b/NNmiwVk=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="bin\Debug\Template_OnLuyen\font-awesome-4.6.3\css\font-awesome.min.css" size="29067">
+  <file name="bin\Debug\Template_OnLuyen\font-awesome-4.6.3\css\font-awesome.min.css" size="29063">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>7Q8FEB1IBybFi81JVqHnsC8StTjQIFjxsOv9q+in70I=</dsig:DigestValue>
+      <dsig:DigestValue>AIodEDkC8V/bHBkfyxzolUMw57jeQ9CauwhVW6YJ9CA=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="bin\Debug\Template_OnLuyen\font-awesome-4.6.3\fonts\fontawesome-webfont.svg" size="392306">
+  <file name="bin\Debug\Template_OnLuyen\font-awesome-4.6.3\fonts\fontawesome-webfont.svg" size="391622">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>BYnOCiGubEaor0CS12ve0D+YCT47njFiUnj502UdKJY=</dsig:DigestValue>
+      <dsig:DigestValue>jjWGOJu0zQGz+FuztiJzm95mJ/KLumOgIMIjypzxua4=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="bin\Debug\Template_OnLuyen\index.html" size="4080">
+  <file name="bin\Debug\Template_OnLuyen\index.html" size="3970">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>/F3HJBuqyGr7lnJ3DPYyfMRN8nh6wzUE7YzhZ+FqmN4=</dsig:DigestValue>
+      <dsig:DigestValue>8P89zW/fxNvU1i/j0dJtwUuAo3fyPBZ43spVtaiqJ1k=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="bin\Debug\Template_OnLuyen\js\daBS.js" size="1713">
+  <file name="bin\Debug\Template_OnLuyen\js\daBS.js" size="1613">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>i2uGUBsJRywt0D1Fzf8BB1t5sKxVu45Utc/tKtgJwZw=</dsig:DigestValue>
+      <dsig:DigestValue>6cuAalAdkAS91X8Otfw6+JH81RjAfI8g9O/O4ohfAyM=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="bin\Debug\Template_OnLuyen\js\test.js" size="7480">
+  <file name="bin\Debug\Template_OnLuyen\js\test.js" size="7249">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>U6TvBFYg4cZIqM2vJZdDqWr6Y8M0Y/tVmAs1AoLPZhg=</dsig:DigestValue>
+      <dsig:DigestValue>0d7kmILkjF7Mmt1SPNvUqF2pO2JaNg3MkuJ2M55utk4=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="bin\Release\Template_OnLuyen\css\bootstrap.css" size="152767">
+  <file name="bin\Release\Template_OnLuyen\css\bootstrap.css" size="146010">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>opI27tVP8lfzTdiKv9Wi8UuRkNhIAvZwMVLWtOpRHKk=</dsig:DigestValue>
+      <dsig:DigestValue>fmMNkMcjSw3xcp9iuPnku/ryk9kaWgrEbfJfKmdZ45o=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="bin\Release\Template_OnLuyen\css\MobileNav.css" size="7275">
+  <file name="bin\Release\Template_OnLuyen\css\MobileNav.css" size="7006">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>007dyo/eLyUBU4s0FkyE5tZEk1+xOPFuDW3oA4jp2gE=</dsig:DigestValue>
+      <dsig:DigestValue>9fHqtMt+XEpGkQI6k0Z9Cfl9RGbVYnmXGhaZ1mlMhqE=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="bin\Release\Template_OnLuyen\css\sb-admin-2.css" size="9123">
+  <file name="bin\Release\Template_OnLuyen\css\sb-admin-2.css" size="8678">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>U/iLLf8RITTI4F0ki91QHcxT0RD3g1PsCmLVZm9ME4Q=</dsig:DigestValue>
+      <dsig:DigestValue>UqDpo11vgTxnveAKFL2fvJx7yJiZZRQ9FTxZd2PD3w4=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="bin\Release\Template_OnLuyen\css\style.css" size="6579">
+  <file name="bin\Release\Template_OnLuyen\css\style.css" size="6181">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>6EPdGuQZfKygXjgFHmVEn0YeHr3nm9+/6Zcorx+OHC4=</dsig:DigestValue>
+      <dsig:DigestValue>txW7Gbvcso6NzK0wfkhrSi5WKHR5I5YG7uNnB5Ejx9w=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="bin\Release\Template_OnLuyen\font-awesome-4.6.3\css\font-awesome.css" size="37333">
+  <file name="bin\Release\Template_OnLuyen\font-awesome-4.6.3\css\font-awesome.css" size="35134">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>tlDR4ddNyT7oEzbrjwByB7D9mUtxCbqZnOoa5S6IUcg=</dsig:DigestValue>
+      <dsig:DigestValue>uXf0U0UCIqBp2J3S53b28h+fpC9uFcA8f+b/NNmiwVk=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="bin\Release\Template_OnLuyen\font-awesome-4.6.3\css\font-awesome.min.css" size="29067">
+  <file name="bin\Release\Template_OnLuyen\font-awesome-4.6.3\css\font-awesome.min.css" size="29063">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>7Q8FEB1IBybFi81JVqHnsC8StTjQIFjxsOv9q+in70I=</dsig:DigestValue>
+      <dsig:DigestValue>AIodEDkC8V/bHBkfyxzolUMw57jeQ9CauwhVW6YJ9CA=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="bin\Release\Template_OnLuyen\font-awesome-4.6.3\fonts\fontawesome-webfont.svg" size="392306">
+  <file name="bin\Release\Template_OnLuyen\font-awesome-4.6.3\fonts\fontawesome-webfont.svg" size="391622">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>BYnOCiGubEaor0CS12ve0D+YCT47njFiUnj502UdKJY=</dsig:DigestValue>
+      <dsig:DigestValue>jjWGOJu0zQGz+FuztiJzm95mJ/KLumOgIMIjypzxua4=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="bin\Release\Template_OnLuyen\index.html" size="4080">
+  <file name="bin\Release\Template_OnLuyen\index.html" size="3970">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>/F3HJBuqyGr7lnJ3DPYyfMRN8nh6wzUE7YzhZ+FqmN4=</dsig:DigestValue>
+      <dsig:DigestValue>8P89zW/fxNvU1i/j0dJtwUuAo3fyPBZ43spVtaiqJ1k=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="bin\Release\Template_OnLuyen\js\daBS.js" size="1713">
+  <file name="bin\Release\Template_OnLuyen\js\daBS.js" size="1613">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>i2uGUBsJRywt0D1Fzf8BB1t5sKxVu45Utc/tKtgJwZw=</dsig:DigestValue>
+      <dsig:DigestValue>6cuAalAdkAS91X8Otfw6+JH81RjAfI8g9O/O4ohfAyM=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="bin\Release\Template_OnLuyen\js\test.js" size="7480">
+  <file name="bin\Release\Template_OnLuyen\js\test.js" size="7249">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>U6TvBFYg4cZIqM2vJZdDqWr6Y8M0Y/tVmAs1AoLPZhg=</dsig:DigestValue>
+      <dsig:DigestValue>0d7kmILkjF7Mmt1SPNvUqF2pO2JaNg3MkuJ2M55utk4=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Template_OnLuyen\css\bootstrap.css" size="152767">
+  <file name="Template_OnLuyen\css\bootstrap.css" size="146010">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>opI27tVP8lfzTdiKv9Wi8UuRkNhIAvZwMVLWtOpRHKk=</dsig:DigestValue>
+      <dsig:DigestValue>fmMNkMcjSw3xcp9iuPnku/ryk9kaWgrEbfJfKmdZ45o=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Template_OnLuyen\css\MobileNav.css" size="7275">
+  <file name="Template_OnLuyen\css\MobileNav.css" size="7006">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>007dyo/eLyUBU4s0FkyE5tZEk1+xOPFuDW3oA4jp2gE=</dsig:DigestValue>
+      <dsig:DigestValue>9fHqtMt+XEpGkQI6k0Z9Cfl9RGbVYnmXGhaZ1mlMhqE=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Template_OnLuyen\css\sb-admin-2.css" size="9123">
+  <file name="Template_OnLuyen\css\sb-admin-2.css" size="8678">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>U/iLLf8RITTI4F0ki91QHcxT0RD3g1PsCmLVZm9ME4Q=</dsig:DigestValue>
+      <dsig:DigestValue>UqDpo11vgTxnveAKFL2fvJx7yJiZZRQ9FTxZd2PD3w4=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Template_OnLuyen\css\style.css" size="6579">
+  <file name="Template_OnLuyen\css\style.css" size="6181">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>6EPdGuQZfKygXjgFHmVEn0YeHr3nm9+/6Zcorx+OHC4=</dsig:DigestValue>
+      <dsig:DigestValue>txW7Gbvcso6NzK0wfkhrSi5WKHR5I5YG7uNnB5Ejx9w=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Template_OnLuyen\font-awesome-4.6.3\css\font-awesome.css" size="37333">
+  <file name="Template_OnLuyen\font-awesome-4.6.3\css\font-awesome.css" size="35134">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>tlDR4ddNyT7oEzbrjwByB7D9mUtxCbqZnOoa5S6IUcg=</dsig:DigestValue>
+      <dsig:DigestValue>uXf0U0UCIqBp2J3S53b28h+fpC9uFcA8f+b/NNmiwVk=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Template_OnLuyen\font-awesome-4.6.3\css\font-awesome.min.css" size="29067">
+  <file name="Template_OnLuyen\font-awesome-4.6.3\css\font-awesome.min.css" size="29063">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>7Q8FEB1IBybFi81JVqHnsC8StTjQIFjxsOv9q+in70I=</dsig:DigestValue>
+      <dsig:DigestValue>AIodEDkC8V/bHBkfyxzolUMw57jeQ9CauwhVW6YJ9CA=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Template_OnLuyen\font-awesome-4.6.3\fonts\fontawesome-webfont.svg" size="392306">
+  <file name="Template_OnLuyen\font-awesome-4.6.3\fonts\fontawesome-webfont.svg" size="391622">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>BYnOCiGubEaor0CS12ve0D+YCT47njFiUnj502UdKJY=</dsig:DigestValue>
+      <dsig:DigestValue>jjWGOJu0zQGz+FuztiJzm95mJ/KLumOgIMIjypzxua4=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Template_OnLuyen\index.html" size="4080">
+  <file name="Template_OnLuyen\index.html" size="3970">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>/F3HJBuqyGr7lnJ3DPYyfMRN8nh6wzUE7YzhZ+FqmN4=</dsig:DigestValue>
+      <dsig:DigestValue>8P89zW/fxNvU1i/j0dJtwUuAo3fyPBZ43spVtaiqJ1k=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Template_OnLuyen\js\daBS.js" size="1713">
+  <file name="Template_OnLuyen\js\daBS.js" size="1613">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>i2uGUBsJRywt0D1Fzf8BB1t5sKxVu45Utc/tKtgJwZw=</dsig:DigestValue>
+      <dsig:DigestValue>6cuAalAdkAS91X8Otfw6+JH81RjAfI8g9O/O4ohfAyM=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Template_OnLuyen\js\test.js" size="7567">
+  <file name="Template_OnLuyen\js\test.js" size="7649">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>rt5NZk50laDYi7/oghwKpuL0wMvp1W9gHNlDXtr30rk=</dsig:DigestValue>
+      <dsig:DigestValue>POHDBzNQa3kB4bOLbBuZTzVc7QOtsqpQNHaUfO7akH4=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="TronDeTracNghiem.exe.config" size="187">
+  <file name="TronDeTracNghiem.exe.config" size="182">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>xm4bo26HQ0LNVwz1vdPYtzhkpMnp2AI5i+f0b+OahTI=</dsig:DigestValue>
+      <dsig:DigestValue>PbQiHFOih9uz3RPvvsStiPKcsu3PE8/gyCn2QGUyyf4=</dsig:DigestValue>
     </hash>
   </file>
   <file name="twist.ico" size="16958">
