@@ -96,6 +96,8 @@ function begin (){
 	document.getElementById("begin").style.display = "none";	
     document.getElementById("timer").innerHTML = time + " :00";
     document.getElementById("countdown").setAttribute("class", "countdownClock");
+    
+    numberOfQuestion = document.getElementsByClassName("question").length;
 	countdown();
 };
 window.onload = function(){
