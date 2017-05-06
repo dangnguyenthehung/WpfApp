@@ -31,7 +31,8 @@ namespace TronDeTracNghiem
         public MainWindow()
         {
             InitializeComponent();
-
+            AppName.Content = "TronDeTracNghiem";
+            Copyright.Content = "TronDeTracNghiem-v2.0 - Đ.N.T.H";
             label_choose_source.Content = "Chọn các file đề muốn trộn";
             label_choose_result.Content = "Chọn file đáp án tương ứng";
             label_choose_number.Content = "Số câu";

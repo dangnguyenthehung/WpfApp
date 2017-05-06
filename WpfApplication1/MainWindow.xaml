@@ -175,6 +175,8 @@
                 </TransformGroup>
             </GridSplitter.RenderTransform>
         </GridSplitter>
+        <Label x:Name="Copyright" Content="" HorizontalAlignment="Left" Margin="11,10,0,0" VerticalAlignment="Top" Width="190" FontSize="10"/>
+        <Label x:Name="AppName" Content="" HorizontalAlignment="Left" Margin="524,0,0,0" VerticalAlignment="Top" Width="254" FontSize="16" FontWeight="Bold" FontStyle="Italic" Height="41" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
 
     </Grid>
 </Window>
