@@ -63,6 +63,7 @@ namespace TronDeTracNghiem.Code
 
                 data.content_after_random_10 = obj.file_10.Process(number.file_10, count);
                 var randomList_10 = obj.file_10.get_RandomList();
+                count += number.file_10; // begin count file 11
 
                 // to -20
                 data.content_after_random_11 = obj.file_11.Process(number.file_11, count);
