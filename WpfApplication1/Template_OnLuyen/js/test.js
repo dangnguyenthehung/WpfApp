@@ -7,12 +7,12 @@
 		var numberOfQuestion = document.getElementsByClassName( "question" ).length;
 		console.log( numberOfQuestion );
 		
-function LamXong(){
-	
-	var caudung
-	caudung = 0
+function LamXong() {
+
+    var caudung;
+    caudung = 0;
 	for (i=1;i<=numberOfQuestion;i++){
-		if (traloi[i]==dapan[i]) {
+		if (traloi[i] == dapan[i]) {
 			caudung++;
 			document.getElementById("DapAn" + i).innerHTML = "<h2 class='true'><b>Đáp án : " + dapan[i] + "</b></h2>"; //hien thi dap dan
 			}

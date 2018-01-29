@@ -68,7 +68,7 @@ namespace TronDeTracNghiem.Code
             int count = 1;
             var i = 0;
             var j = 0;
-            for (i = 0; i < 10; i++) // i max = number of source file
+            for (i = 0; i < 20; i++) // i max = number of source file
             {
                 for (j = 0; j < data[i].Length; j++)
                 {
@@ -90,11 +90,11 @@ namespace TronDeTracNghiem.Code
             string start_result = "'\">";
             string end_result = "</p>";
 
-            string[][] result_combine = new string[10][];
+            //string[][] result_combine = new string[10][];
 
             var i = 0;
             var j = 0;
-            for (i = 0; i < 10; i++) // i max = number of source file
+            for (i = 0; i < 20; i++) // i max = number of source file
             {
                 for (j = 0; j < data[i].Length; j++)
                 {
