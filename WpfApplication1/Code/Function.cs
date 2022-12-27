@@ -22,123 +22,135 @@ namespace TronDeTracNghiem.Code
                 count = 1;
                 ResultList result = new ResultList();
                 ContentList data = new ContentList();
-            
-                data.content_after_random_1 = obj.file_1.Process(number.file_1, count);
-                //var randomList_1 = obj.result_1.Write_random_list(obj.file_1.get_RandomList());
-                var randomList_1 = obj.file_1.get_RandomList();
-                count += number.file_1; // begin count file 2
-                //string[] seperate_result_1 = obj.result_1.Split_all_result();
 
-                data.content_after_random_2 = obj.file_2.Process(number.file_2, count);
-                var randomList_2 = obj.file_2.get_RandomList();
-                count += number.file_2; // begin count file 3
+                foreach (var file in number.files)
+                {
+                    var source_file = new SourceFileData();
+                    var result_file = new ResultFileData();
 
-                data.content_after_random_3 = obj.file_3.Process(number.file_3, count);
-                var randomList_3 = obj.file_3.get_RandomList();
-                count += number.file_3; // begin count file 4
+                    data.items.Add(new ContentListItem(source_file.Process(file.file_number, count), file.file_number));
+                    //var randomList_1 = obj.result_1.Write_random_list(obj.file_1.get_RandomList());
+                    var randomList_1 = source_file.get_RandomList();
+                    count += file.file_number; // begin count file 2
 
-                data.content_after_random_4 = obj.file_4.Process(number.file_4, count);
-                var randomList_4 = obj.file_4.get_RandomList();
-                count += number.file_4; // begin count file 5
+                    result.result_List_Items.Add(new ResultListitem(result_file.Get_Selected_Result(randomList_1), file.file_number));
+                    
+                    obj.source_files.Add(source_file);
+                    obj.result_files.Add(result_file);
+                }
+                
+                ////string[] seperate_result_1 = obj.result_1.Split_all_result();
 
-                data.content_after_random_5 = obj.file_5.Process(number.file_5, count);
-                var randomList_5 = obj.file_5.get_RandomList();
-                count += number.file_5; // begin count file 6
+                //data.content_after_randoms.Add(obj.file_2.Process(number.file_2, count));
+                //var randomList_2 = obj.file_2.get_RandomList();
+                //count += number.file_2; // begin count file 3
 
-                data.content_after_random_6 = obj.file_6.Process(number.file_6, count);
-                var randomList_6 = obj.file_6.get_RandomList();
-                count += number.file_6; // begin count file 7
+                //data.content_after_randoms.Add(obj.file_3.Process(number.file_3, count));
+                //var randomList_3 = obj.file_3.get_RandomList();
+                //count += number.file_3; // begin count file 4
 
-                data.content_after_random_7 = obj.file_7.Process(number.file_7, count);
-                var randomList_7 = obj.file_7.get_RandomList();
-                count += number.file_7; // begin count file 8
+                //data.content_after_randoms.Add(obj.file_4.Process(number.file_4, count));
+                //var randomList_4 = obj.file_4.get_RandomList();
+                //count += number.file_4; // begin count file 5
 
-                data.content_after_random_8 = obj.file_8.Process(number.file_8, count);
-                var randomList_8 = obj.file_8.get_RandomList();
-                count += number.file_8; // begin count file 9
+                //data.content_after_randoms.Add(obj.file_5.Process(number.file_5, count));
+                //var randomList_5 = obj.file_5.get_RandomList();
+                //count += number.file_5; // begin count file 6
 
-                data.content_after_random_9 = obj.file_9.Process(number.file_9, count);
-                var randomList_9 = obj.file_9.get_RandomList();
-                count += number.file_9; // begin count file 10
+                //data.content_after_randoms.Add(obj.file_6.Process(number.file_6, count));
+                //var randomList_6 = obj.file_6.get_RandomList();
+                //count += number.file_6; // begin count file 7
 
-                data.content_after_random_10 = obj.file_10.Process(number.file_10, count);
-                var randomList_10 = obj.file_10.get_RandomList();
-                count += number.file_10; // begin count file 11
+                //data.content_after_randoms.Add(obj.file_7.Process(number.file_7, count));
+                //var randomList_7 = obj.file_7.get_RandomList();
+                //count += number.file_7; // begin count file 8
 
-                // to -20
-                data.content_after_random_11 = obj.file_11.Process(number.file_11, count);
-                var randomList_11 = obj.file_11.get_RandomList();
-                count += number.file_11; // begin count file 12
+                //data.content_after_randoms.Add(obj.file_8.Process(number.file_8, count));
+                //var randomList_8 = obj.file_8.get_RandomList();
+                //count += number.file_8; // begin count file 9
 
-                data.content_after_random_12 = obj.file_12.Process(number.file_12, count);
-                var randomList_12 = obj.file_12.get_RandomList();
-                count += number.file_12; // begin count file 13
+                //data.content_after_randoms.Add(obj.file_9.Process(number.file_9, count));
+                //var randomList_9 = obj.file_9.get_RandomList();
+                //count += number.file_9; // begin count file 10
 
-                data.content_after_random_13 = obj.file_13.Process(number.file_13, count);
-                var randomList_13 = obj.file_13.get_RandomList();
-                count += number.file_13; // begin count file 14
+                //data.content_after_randoms.Add(obj.file_10.Process(number.file_10, count));
+                //var randomList_10 = obj.file_10.get_RandomList();
+                //count += number.file_10; // begin count file 11
 
-                data.content_after_random_14 = obj.file_14.Process(number.file_14, count);
-                var randomList_14 = obj.file_14.get_RandomList();
-                count += number.file_14; // begin count file 15
+                //// to -20
+                //data.content_after_randoms.Add(obj.file_11.Process(number.file_11, count));
+                //var randomList_11 = obj.file_11.get_RandomList();
+                //count += number.file_11; // begin count file 12
 
-                data.content_after_random_15 = obj.file_15.Process(number.file_15, count);
-                var randomList_15 = obj.file_15.get_RandomList();
-                count += number.file_15; // begin count file 16
+                //data.content_after_randoms.Add(obj.file_12.Process(number.file_12, count));
+                //var randomList_12 = obj.file_12.get_RandomList();
+                //count += number.file_12; // begin count file 13
 
-                data.content_after_random_16 = obj.file_16.Process(number.file_16, count);
-                var randomList_16 = obj.file_16.get_RandomList();
-                count += number.file_16; // begin count file 17
+                //data.content_after_randoms.Add(obj.file_13.Process(number.file_13, count));
+                //var randomList_13 = obj.file_13.get_RandomList();
+                //count += number.file_13; // begin count file 14
 
-                data.content_after_random_17 = obj.file_17.Process(number.file_17, count);
-                var randomList_17 = obj.file_17.get_RandomList();
-                count += number.file_17; // begin count file 18
+                //data.content_after_randoms.Add(obj.file_14.Process(number.file_14, count));
+                //var randomList_14 = obj.file_14.get_RandomList();
+                //count += number.file_14; // begin count file 15
 
-                data.content_after_random_18 = obj.file_18.Process(number.file_18, count);
-                var randomList_18 = obj.file_18.get_RandomList();
-                count += number.file_18; // begin count file 19
+                //data.content_after_randoms.Add(obj.file_15.Process(number.file_15, count));
+                //var randomList_15 = obj.file_15.get_RandomList();
+                //count += number.file_15; // begin count file 16
 
-                data.content_after_random_19 = obj.file_19.Process(number.file_19, count);
-                var randomList_19 = obj.file_19.get_RandomList();
-                count += number.file_19; // begin count file 20
+                //data.content_after_randoms.Add(obj.file_16.Process(number.file_16, count));
+                //var randomList_16 = obj.file_16.get_RandomList();
+                //count += number.file_16; // begin count file 17
 
-                data.content_after_random_20 = obj.file_20.Process(number.file_20, count);
-                var randomList_20 = obj.file_20.get_RandomList();
+                //data.content_after_randoms.Add(obj.file_17.Process(number.file_17, count));
+                //var randomList_17 = obj.file_17.get_RandomList();
+                //count += number.file_17; // begin count file 18
+
+                //data.content_after_randoms.Add(obj.file_18.Process(number.file_18, count));
+                //var randomList_18 = obj.file_18.get_RandomList();
+                //count += number.file_18; // begin count file 19
+
+                //data.content_after_randoms.Add(obj.file_19.Process(number.file_19, count));
+                //var randomList_19 = obj.file_19.get_RandomList();
+                //count += number.file_19; // begin count file 20
+
+                //data.content_after_randoms.Add(obj.file_20.Process(number.file_20, count));
+                //var randomList_20 = obj.file_20.get_RandomList();
                 //
 
                 // combine result
-                result.result_List_1 = obj.result_1.Get_Selected_Result(randomList_1);
-                result.result_List_2 = obj.result_2.Get_Selected_Result(randomList_2);
-                result.result_List_3 = obj.result_3.Get_Selected_Result(randomList_3);
-                result.result_List_4 = obj.result_4.Get_Selected_Result(randomList_4);
-                result.result_List_5 = obj.result_5.Get_Selected_Result(randomList_5);
-                result.result_List_6 = obj.result_6.Get_Selected_Result(randomList_6);
-                result.result_List_7 = obj.result_7.Get_Selected_Result(randomList_7);
-                result.result_List_8 = obj.result_8.Get_Selected_Result(randomList_8);
-                result.result_List_9 = obj.result_9.Get_Selected_Result(randomList_9);
-                result.result_List_10 = obj.result_10.Get_Selected_Result(randomList_10);
+                
+                //result.result_List_2 = obj.result_2.Get_Selected_Result(randomList_2);
+                //result.result_List_3 = obj.result_3.Get_Selected_Result(randomList_3);
+                //result.result_List_4 = obj.result_4.Get_Selected_Result(randomList_4);
+                //result.result_List_5 = obj.result_5.Get_Selected_Result(randomList_5);
+                //result.result_List_6 = obj.result_6.Get_Selected_Result(randomList_6);
+                //result.result_List_7 = obj.result_7.Get_Selected_Result(randomList_7);
+                //result.result_List_8 = obj.result_8.Get_Selected_Result(randomList_8);
+                //result.result_List_9 = obj.result_9.Get_Selected_Result(randomList_9);
+                //result.result_List_10 = obj.result_10.Get_Selected_Result(randomList_10);
 
-                result.result_List_11 = obj.result_11.Get_Selected_Result(randomList_11);
-                result.result_List_12 = obj.result_12.Get_Selected_Result(randomList_12);
-                result.result_List_13 = obj.result_13.Get_Selected_Result(randomList_13);
-                result.result_List_14 = obj.result_14.Get_Selected_Result(randomList_14);
-                result.result_List_15 = obj.result_15.Get_Selected_Result(randomList_15);
-                result.result_List_16 = obj.result_16.Get_Selected_Result(randomList_16);
-                result.result_List_17 = obj.result_17.Get_Selected_Result(randomList_17);
-                result.result_List_18 = obj.result_18.Get_Selected_Result(randomList_18);
-                result.result_List_19 = obj.result_19.Get_Selected_Result(randomList_19);
-                result.result_List_20 = obj.result_20.Get_Selected_Result(randomList_20);
+                //result.result_List_11 = obj.result_11.Get_Selected_Result(randomList_11);
+                //result.result_List_12 = obj.result_12.Get_Selected_Result(randomList_12);
+                //result.result_List_13 = obj.result_13.Get_Selected_Result(randomList_13);
+                //result.result_List_14 = obj.result_14.Get_Selected_Result(randomList_14);
+                //result.result_List_15 = obj.result_15.Get_Selected_Result(randomList_15);
+                //result.result_List_16 = obj.result_16.Get_Selected_Result(randomList_16);
+                //result.result_List_17 = obj.result_17.Get_Selected_Result(randomList_17);
+                //result.result_List_18 = obj.result_18.Get_Selected_Result(randomList_18);
+                //result.result_List_19 = obj.result_19.Get_Selected_Result(randomList_19);
+                //result.result_List_20 = obj.result_20.Get_Selected_Result(randomList_20);
 
                 Write_content_to_file(obj, data, d);
                 Write_result_to_file(obj, result, d);
             }
             // end combine
         }
-         // begin group of function to check data_file & result_file names
+        // begin group of function to check data_file & result_file names
         public static int? check_File_Name(DataToMerge obj)
         {
             int index = 0;
-            
+
             List<string> list_file_name = add_fileName_to_list(obj);
             List<string> list_result_name = add_resultName_to_list(obj);
             List<CompareObject> list = get_list(list_file_name, list_result_name);
@@ -168,57 +180,27 @@ namespace TronDeTracNghiem.Code
                 return null;
             }
             return index;
-            
+
         }
         private static List<string> add_fileName_to_list(DataToMerge obj)
         {
             List<string> list = new List<string>();
-            list.Add(get_File_Name(obj.file_1.path));
-            list.Add(get_File_Name(obj.file_2.path));
-            list.Add(get_File_Name(obj.file_3.path));
-            list.Add(get_File_Name(obj.file_4.path));
-            list.Add(get_File_Name(obj.file_5.path));
-            list.Add(get_File_Name(obj.file_6.path));
-            list.Add(get_File_Name(obj.file_7.path));
-            list.Add(get_File_Name(obj.file_8.path));
-            list.Add(get_File_Name(obj.file_9.path));
-            list.Add(get_File_Name(obj.file_10.path));
-            list.Add(get_File_Name(obj.file_11.path));
-            list.Add(get_File_Name(obj.file_12.path));
-            list.Add(get_File_Name(obj.file_13.path));
-            list.Add(get_File_Name(obj.file_14.path));
-            list.Add(get_File_Name(obj.file_15.path));
-            list.Add(get_File_Name(obj.file_16.path));
-            list.Add(get_File_Name(obj.file_17.path));
-            list.Add(get_File_Name(obj.file_18.path));
-            list.Add(get_File_Name(obj.file_19.path));
-            list.Add(get_File_Name(obj.file_20.path));
+            
+            foreach (var source_file in obj.source_files)
+            {
+                list.Add(get_File_Name(source_file.path));
+            }
 
             return list;
         }
         private static List<string> add_resultName_to_list(DataToMerge obj)
         {
             List<string> list = new List<string>();
-            list.Add(get_File_Name(obj.result_1.path));
-            list.Add(get_File_Name(obj.result_2.path));
-            list.Add(get_File_Name(obj.result_3.path));
-            list.Add(get_File_Name(obj.result_4.path));
-            list.Add(get_File_Name(obj.result_5.path));
-            list.Add(get_File_Name(obj.result_6.path));
-            list.Add(get_File_Name(obj.result_7.path));
-            list.Add(get_File_Name(obj.result_8.path));
-            list.Add(get_File_Name(obj.result_9.path));
-            list.Add(get_File_Name(obj.result_10.path));
-            list.Add(get_File_Name(obj.result_11.path));
-            list.Add(get_File_Name(obj.result_12.path));
-            list.Add(get_File_Name(obj.result_13.path));
-            list.Add(get_File_Name(obj.result_14.path));
-            list.Add(get_File_Name(obj.result_15.path));
-            list.Add(get_File_Name(obj.result_16.path));
-            list.Add(get_File_Name(obj.result_17.path));
-            list.Add(get_File_Name(obj.result_18.path));
-            list.Add(get_File_Name(obj.result_19.path));
-            list.Add(get_File_Name(obj.result_20.path));
+
+            foreach (var result_file in obj.result_files)
+            {
+                list.Add(get_File_Name(result_file.path));
+            }
 
             return list;
         }
@@ -295,33 +277,18 @@ namespace TronDeTracNghiem.Code
             }
             try
             {
-                string[][] combine = new string[20][];
-                combine[0] = data.content_after_random_1;
-                combine[1] = data.content_after_random_2;
-                combine[2] = data.content_after_random_3;
-                combine[3] = data.content_after_random_4;
-                combine[4] = data.content_after_random_5;
-                combine[5] = data.content_after_random_6;
-                combine[6] = data.content_after_random_7;
-                combine[7] = data.content_after_random_8;
-                combine[8] = data.content_after_random_9;
-                combine[9] = data.content_after_random_10;
-                combine[10] = data.content_after_random_11;
-                combine[11] = data.content_after_random_12;
-                combine[12] = data.content_after_random_13;
-                combine[13] = data.content_after_random_14;
-                combine[14] = data.content_after_random_15;
-                combine[15] = data.content_after_random_16;
-                combine[16] = data.content_after_random_17;
-                combine[17] = data.content_after_random_18;
-                combine[18] = data.content_after_random_19;
-                combine[19] = data.content_after_random_20;
+                string[][] combine = new string[data.items.Count][];
 
+                foreach(var content in data.items)
+                {
+                    combine[content.index] = content.content_after_random;
+                }
+                
                 //the number of array is from 0-100 (0 is the content before the first <div>, the needed contents is from 1 to 100)
                 string combineStr = "";
-                string finalStr = "@{\nViewBag.Title = \"" + obj.Type.text + " - " + d + "\";\n" + 
+                string finalStr = "@{\nViewBag.Title = \"" + obj.Type.text + " - " + d + "\";\n" +
                     "Layout = \"~/Views/Shared/_LayoutClient.cshtml\";\n}\n" +
-                    "<h2 class=\"title\">Đối tượng " + obj.Type.text + " - " + d +"</h2>\n";
+                    "<h2 class=\"title\">Đối tượng " + obj.Type.text + " - " + d + "</h2>\n";
                 string finalStr_backup = "";
                 string finalStr_word = "";
 
@@ -352,7 +319,7 @@ namespace TronDeTracNghiem.Code
                     finalStr_word = ReadTemplate.Split_for_word(combine);
                     file.WriteLine(finalStr_word);
                 }
-                
+
 
             }
             catch (Exception ex)
@@ -361,7 +328,7 @@ namespace TronDeTracNghiem.Code
                 Console.Read();
             }
         }
-        private static void Write_result_to_file (DataToMerge obj, ResultList result, int d)
+        private static void Write_result_to_file(DataToMerge obj, ResultList result, int d)
         {
             var result_final_path = obj.file_final.path + "\\Result\\";
             string result_final_name = obj.Type.value + "_" + d + ".txt";
@@ -429,7 +396,7 @@ namespace TronDeTracNghiem.Code
                 finalStr = finalStr.Remove(finalStr.Length - 1);
 
                 using (StreamWriter file = new StreamWriter(result_final, false, Encoding.UTF8))
-                {                    
+                {
                     file.WriteLine(finalStr);
                 }
 
@@ -454,11 +421,11 @@ namespace TronDeTracNghiem.Code
             file.content = File.ReadAllText(file.path);
             string[] seperate_file = file.content.Split(new string[] { "<div class=\"question\">" }, StringSplitOptions.None);
 
-            number = seperate_file.Length -1;
+            number = seperate_file.Length - 1;
 
             return number;
         }
-        public static ObservableCollection<int> Add_item_combobox (SourceFileData file)
+        public static ObservableCollection<int> Add_item_combobox(SourceFileData file)
         {
             int number = Get_number_of_question(file);
             ObservableCollection<int> list = new ObservableCollection<int>();
@@ -482,10 +449,10 @@ namespace TronDeTracNghiem.Code
         }
         public static ObservableCollection<TypeItem> Add_item_comboBox_type()
         {
-            
+
             ObservableCollection<TypeItem> list = new ObservableCollection<TypeItem>();
-            
-            list.Add(new TypeItem("Sỹ quan","SQ"));
+
+            list.Add(new TypeItem("Sỹ quan", "SQ"));
             list.Add(new TypeItem("Quân nhân chuyên nghiệp", "QNCN"));
             list.Add(new TypeItem("Hạ sỹ quan", "HSQ"));
             list.Add(new TypeItem("Đề riêng", "Individual"));
